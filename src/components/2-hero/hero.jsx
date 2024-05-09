@@ -33,7 +33,7 @@ const Hero = () => {
       <div className="container d-flex ">
         <section className="details d-flex ">
           <div className="image">
-            <img src="/src/images/H.jpg" alt="H-image" />
+            <img src="/src/images/H_letter.jpg" alt="H-image" />
             <span className="icon-verified verify"></span>
           </div>
           <h1>This is Hesham Abdelazim Kamel Ahmed</h1>
