@@ -1,0 +1,139 @@
+/*========================
+    table contents
+==========================
+
+- Hero designs
+- Image + icon
+- texts head + parag
+- social
+- right sectoin
+- media query
+
+*/
+
+/*========================
+    Hero designs
+========================*/
+
+.hero{
+    /* margin-top: 4rem ; */
+    z-index: 2;
+    position: relative;
+}
+.hero .container{
+gap: 20px;
+}
+
+.hero .details{
+    flex-grow: 1;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+
+
+
+
+
+
+/*========================
+    Image + icon
+========================*/
+.hero .details .image{
+    position: relative;
+
+}
+.hero .details img{
+    border-radius: 50%;
+    padding: 4px;
+    box-shadow: 0px 0px 7px var(--logo-border) inset;
+    width: 100%;
+    object-position: 4px;
+    background-color: black;
+}
+.hero .details .verify{
+    color: var(--logo-border);
+    font-size: 1.5rem;
+    margin-left: -1.1rem;
+    position: absolute;
+    bottom: 1%;
+    right: 1%;
+}
+
+
+/*========================
+    texts head + parag
+========================*/
+.hero h1{
+    font-size: 2.4rem;
+    /* color:rgb(244, 244, 245); */
+    color:var(--title);
+}
+.hero p{
+    /* color: rgb(161, 161, 170); */
+    color: var(--subtitle);
+    letter-spacing: 1rem;
+    word-spacing: 0.1rem;
+    letter-spacing: 0.06rem;
+    line-height: 2rem;
+}
+
+
+/*========================
+    social
+========================*/
+.hero .social{
+    gap: 1.2rem;
+}
+.hero .social a{
+    /* color:rgb(161, 161, 170); */
+    color: var(--subtitle);
+    font-size: 20px;
+}
+.dark .hero .social a:hover{
+    scale: 1.2;
+    color: white;
+}
+.light .hero .social a:hover{
+    scale: 1.2;
+    color: rgb(45, 44, 44);
+}
+.hero .social a:active{
+    scale: 0.9;
+}
+
+/*========================
+    right section
+========================*/
+/* .hero .right-section{
+    position: relative;
+}
+.hero .right-section::after{
+    content: "";
+    position: absolute;
+
+} */
+
+
+/*========================
+    media query
+========================*/
+
+@media (max-width:992px){
+    .hero .animation{
+        display: none;
+    }
+    .hero .details{
+        gap: 1rem;
+    }
+    
+}
+@media (max-width:768px){
+    .hero .details{
+        align-items: center;
+        text-align: center;
+    }
+
+}
+

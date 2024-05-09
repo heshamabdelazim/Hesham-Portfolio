@@ -1,0 +1,194 @@
+/*========================
+    table contents
+==========================
+
+- main design: 
+- left section
+- right section
+- every project(div) in the right section
+- media query
+- animation
+- 
+
+*/
+
+
+
+
+/*========================
+    main design
+==========================*/
+main{
+    min-height: 85vh;
+}
+main .container{
+    gap: 2rem;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/*========================
+    Left section
+==========================*/
+main .left-section{
+    flex-direction: column;
+    gap: 2rem;
+    align-items: stretch;
+}
+main .left-section div{
+    padding: 1rem;
+    background-color: var(--secondary);
+    min-width:11.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: var(--subtitle);
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: 0.5s , color 0.5s 0.1s;
+    box-sizing: border-box;
+    border-radius: 6px;
+    text-align: center;
+}
+
+main .left-section div:hover,main .left-section div.active{
+    background-color: rgb(103, 103, 103);
+    color: white;
+    border-right: 3px solid var(--blue);
+    border-left: 3px solid var(--blue);
+    letter-spacing: 2px;
+    opacity: 1;
+}
+
+main .left-section div:active{
+    scale: 0.9;
+}
+
+/*========================
+    right section
+==========================*/
+main .right-section{
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+/*========================
+    every project(div) in the right section
+==========================*/
+main .right-section .project{
+    color: white;
+    border-radius: 6px;
+    transition: 0.5s linear;
+    box-shadow: 1px 1px 10px 1px gray ;
+    position: relative;
+    /* overflow: hidden; */
+    animation: appear 0.9s;
+    /* background-color: rgb(103, 103, 103); */
+    background: linear-gradient(#00000059 40%, var(--blue));
+
+}
+/* main .right-section .project::before, main .right-section .project::after{
+    content: "";
+    position: absolute;
+    width: 2px;
+    background-color: orange;
+    height: 0;
+    transition: 0.5s;
+} */
+/* main .right-section .project::after{
+    top: 0;
+    left: 0;
+}
+main .right-section .project::before{
+    bottom: 0;
+    right: 0;
+} */
+main .right-section .project:hover{
+    transform: translateY(-4px);
+    box-shadow: 1px 1px 15px 5px gray ;
+    /* border-right: 5px solid orange;
+    border-left: 5px solid orange; */
+}
+main .project:hover::before, main .project:hover::after{
+    height: 100%;
+}
+main .right-section .project img{
+    width: 100%;
+}
+main .right-section .project article{
+    padding: 0.9rem;
+}
+
+main .right-section .project header{
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+main .right-section .project footer{
+    padding: 0.5rem;
+    
+}
+
+
+
+/*========================
+    media query
+==========================*/
+@media(max-width:992px){
+    main .left-section div{
+        font-size: 1rem;
+    }
+}
+@media(max-width:768px){
+    main .container{
+        gap: 0.7rem;
+        /* flex-direction: column; */
+    }
+    main .left-section{
+        /* flex-direction: row; */
+        gap: 1rem;
+    }
+    main .left-section div{
+        padding:0.6rem ;
+        min-width:fit-content;
+    }
+    main .left-section div:hover,main .left-section div.active{
+        letter-spacing: unset;
+    }
+    main .right-section{
+        grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+    }
+    /* main .left-section div{
+        
+    } */
+}
+@media(max-width:480px){}
+
+/*========================
+    animation
+==========================*/
+
+@keyframes appear{
+    0%{
+        transform: scale(0.7) rotate(0);
+        opacity: 0;
+    }
+    30%{
+        transform: scale(1) rotate(-1deg);
+    }
+    70%{
+        transform: scale(1) rotate(1deg);
+    }
+    100%{
+        transform: scale(1) rotate(0);
+        opacity: 1;
+    }
+}
+
+
+

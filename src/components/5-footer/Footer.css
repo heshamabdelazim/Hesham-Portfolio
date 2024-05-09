@@ -1,0 +1,28 @@
+footer {
+    color: var(--text);
+    padding: 0.6rem;
+    text-align: center;
+}
+footer p {
+    line-height: 2rem;
+    letter-spacing: 1px;
+    font-size: 18px;
+    /* text-shadow: 0px 0px 3px var(--blue), 0px 0px 14px #25d358; */
+    font-weight: bold;
+    opacity: 0.4;
+    display: inline;
+    margin-right: 10px;
+    text-transform: capitalize;
+}
+footer a{
+    color: orange;
+    text-transform: uppercase;
+    font-size: 18px;
+    text-shadow: 0px 0px 2px orange, 0px 0px 3px orange;
+    letter-spacing: 3px;
+}
+footer span{
+    display: block;
+    opacity: 0.3;
+    text-transform: capitalize;
+}

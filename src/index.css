@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,900&display=swap');
+
+HTML{
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+}
+*{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+:root{
+  --secondary: rgb(24 24 27); /*the container background*/
+  --border:rgba(63, 63, 70, 1);
+  
+  
+  --bg-header:rgb(39, 39, 42);
+  --blue: rgb(93, 188, 252);
+  --logo-border: #5eff7d;
+
+}
+body{
+  background-color: var(--primary);
+}
+
+input:disabled{
+  opacity: 0.4;
+}
+/* =============================
+      dark - light mood
+================================*/
+/* You just can put them all inside :root and only make .light but why I do .dark also?
+To make transition also from light to dark */
+.light{
+  --primary: #d2d2d2;
+  --secondary: #aeaab2; 
+  --title: black;
+  --subtitle: rgb(50, 50, 50);
+  /* --logo-border: #0ac931; */
+  --sky:url(/src/images/sky\ daylight\ .jpg);
+  --blue:rgb(0 152 255);
+  /* --hover: rgba(103, 103, 103, 0.652); */
+  --text:black;
+}
+.dark{
+  --primary: rgb(33, 33, 33);
+  --secondary: black; 
+  --title: rgb(244, 244, 245);
+  --subtitle: rgb(161, 161, 170);
+  --sky: url(/src/images/sky.jpg);
+  --blue: rgb(93, 188, 252);
+  /* --hover: rgba(103, 103, 103, 0.652); */
+  --text:white;
+}
+.light, .dark, .container,.openning{
+  transition:1.1s ;
+}
+
+
+.divider{
+  border-top: 2px solid var(--border);
+}
+.d-flex{
+  display: flex;
+  align-items: center;
+}
+
+.border{
+  border: 2px solid red;
+}
+
+a{
+  color: initial; /*default color */
+  transition: 0.3s;
+}
+
+
+/* =============================
+        Container + opening
+================================*/
+.container{
+  width: 80%;
+  /* border: 2px solid var(--border); */
+  margin: 0 auto;
+  /* background-color: var(--secondary); */
+  color: #fff;
+  padding: 3rem 0;
+
+}
+
+.openning{ 
+  min-height: 100vh;
+  background: var(--sky);
+  /* object-fit: contain; */ /*This line only for img tag*/
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.openning::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+ }
+
+  .openning::before{
+    background: linear-gradient(to bottom, transparent 90%, var(--primary) 100%);
+  }
+
+
+
+/* =============================
+      Arrow scroll top
+================================*/
+[class*=arrow-up]{
+  /* Notice This selector and notice (*=) it finds any element that has class
+  that contains arrow-up in middle
+  and maybe connected with other words. Look the mouse on it  */
+  color: green;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 1rem;
+  border-radius: 50%;
+  background-color: lightgreen;
+  cursor: pointer;
+  transition: 0.3s;
+  z-index: 99;
+}
+
+[class*=arrow-up]:hover{
+  background-color: rgb(116, 215, 116);
+}
+[class*=arrow-up]:active{
+  scale: 0.9;
+}
+
+  /* =============================
+        media query
+================================*/
+@media (max-width:992px){
+  .hide{
+    display: none;
+  }
+}
+
+@media (max-width:768px){
+  .container{
+    width: 95%;
+    padding: 2rem 0;
+  }
+  [class*=arrow-up]{
+    font-size: 0.8rem;
+    padding: 0.8rem;
+    bottom: 66px;
+  }
+}
