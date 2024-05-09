@@ -40,7 +40,7 @@ To make transition also from light to dark */
   --title: black;
   --subtitle: rgb(50, 50, 50);
   /* --logo-border: #0ac931; */
-  --sky:url(/src/images/sky\ daylight\ .jpg);
+  --sky:url(/src/images/daylight.jpg);
   --blue:rgb(0 152 255);
   /* --hover: rgba(103, 103, 103, 0.652); */
   --text:black;
@@ -50,7 +50,7 @@ To make transition also from light to dark */
   --secondary: black; 
   --title: rgb(244, 244, 245);
   --subtitle: rgb(161, 161, 170);
-  --sky: url(/src/images/sky.jpg);
+  --sky: url(/src/images/night.jpg);
   --blue: rgb(93, 188, 252);
   /* --hover: rgba(103, 103, 103, 0.652); */
   --text:white;

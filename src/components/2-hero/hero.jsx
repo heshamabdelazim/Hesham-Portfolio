@@ -33,10 +33,10 @@ const Hero = () => {
       <div className="container d-flex ">
         <section className="details d-flex ">
           <div className="image">
-            <img src="/src/images/H.jpeg" alt="H-image" />
+            <img src="/src/images/H.jpg" alt="H-image" />
             <span className="icon-verified verify"></span>
           </div>
-          <h1>Hesham Abdelazim Kamel Ahmed</h1>
+          <h1>This is Hesham Abdelazim Kamel Ahmed</h1>
           <p>
             Front-End Developer using ReactJs. <br /> Graduated from faculty of
             science - Damanhour University. <br /> Physics department.

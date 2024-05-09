@@ -6,10 +6,9 @@ import rightSection from "./right-section";
 import RightSection from "./right-section";
 
 // images
-import temp1 from "../../images/first project.png";
-import temp2 from "../../images/second project.png";
-import temp3 from "../../images/third template.png";
-import photo from "../../images/H.jpeg";
+import temp1 from "../../images/first_project.png";
+import temp2 from "../../images/second_project.png";
+import temp3 from "../../images/third_template.png";
 
 const Main = () => {
   let [category, setCategory] = useState("All");
