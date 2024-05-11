@@ -34,6 +34,8 @@ main .left-section{
     flex-direction: column;
     gap: 2rem;
     align-items: stretch;
+    position: sticky;
+    top: 30px;
 }
 main .left-section div{
     padding: 1rem;
