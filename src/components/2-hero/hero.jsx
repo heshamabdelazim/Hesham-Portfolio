@@ -41,7 +41,7 @@ const Hero = () => {
           <h1>Hesham Abdelazim Kamel Ahmed</h1>
           <p>
             Front-End Developer using ReactJs. <br /> Graduated from faculty of
-            science(physics) - Damanhour University. <br /> Physics department.
+            science(physics) - Damanhour University.
           </p>
           <div className="social d-flex">
             {allSocial.map((obj, ind) => (
