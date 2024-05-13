@@ -10,3 +10,5 @@ Currently, two official plugins are available:
 
 
 Portfolio Here : https://main--hesham98-portfolio.netlify.app/
+
+Portfolio has 4 sections (hero + main + contact + footer)
