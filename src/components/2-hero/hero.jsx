@@ -1,7 +1,7 @@
 import React from "react";
 import "./hero.css";
 
-import hLetter from "../../images/H_letter.jpg";
+import formal from "../../images/formal.jpg";
 // lottie-react for animation
 import Lottie from "lottie-react";
 import programmingAnimation from "./../../animation/coding.json";
@@ -35,7 +35,7 @@ const Hero = () => {
       <div className="container d-flex ">
         <section className="details d-flex ">
           <div className="image">
-            <img src={hLetter} alt="H-image" />
+            <img src={formal} alt="H-image" />
             <span className="icon-verified verify"></span>
           </div>
           <h1>Hesham Abdelazim Kamel Ahmed</h1>
