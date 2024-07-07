@@ -8,28 +8,19 @@ import programmingAnimation from "./../../animation/coding.json";
 
 const Hero = () => {
   // This OOP to put icons of social
-  class SocialItem {
-    static number = 0;
-    constructor(i, h) {
-      this.icon = i;
-      this.href = h;
-      SocialItem.number++;
-    }
-  }
-  const allSocial = [
-    // declairing objects from the class
-    new SocialItem("icon-github", "https://github.com/heshamabdelazim"),
-    new SocialItem("icon-envelope", "mailto:heshamabdelazim3@gmail.com"),
-    new SocialItem(
-      "icon-facebook2",
-      "https://www.facebook.com/hesham.abdelazim.94"
-    ),
-    new SocialItem(
-      "icon-linkedin",
-      "https://www.linkedin.com/in/hesham-abdelazim-678759283/"
-    ),
-  ];
 
+  const allSocial = [
+    { icon: "icon-github", href: "https://github.com/heshamabdelazim" },
+    { icon: "icon-envelope", href: "mailto:heshamabdelazim3@gmail.com" },
+    {
+      icon: "icon-facebook2",
+      href: "https://www.facebook.com/hesham.abdelazim.94",
+    },
+    {
+      icon: "icon-github",
+      href: "https://www.linkedin.com/in/hesham-abdelazim-678759283/",
+    },
+  ];
   return (
     <div className="hero ">
       <div className="container d-flex ">
@@ -39,14 +30,14 @@ const Hero = () => {
             <span className="icon-verified verify"></span>
           </div>
           <h1>Hesham Abdelazim Kamel</h1>
-          <p>
+          <p className="parag">
             Front-End Developer using ReactJs. <br /> Graduated from faculty of
             science(physics) - Damanhour University.
           </p>
           <div className="social d-flex">
             {allSocial.map((obj, ind) => (
               <a
-                key={SocialItem.number - ind}
+                key={ind}
                 href={obj.href}
                 className={obj.icon}
                 target="_blanck"

@@ -6,6 +6,7 @@
 - left section
 - right section
 - every project(div) in the right section
+- Footer of every div
 - media query
 - animation
 - 
@@ -86,57 +87,73 @@ main .right-section .project{
     color: white;
     border-radius: 6px;
     transition: 0.5s linear;
-    box-shadow: 1px 1px 10px 1px gray ;
+    box-shadow: 1px 1px 10px 1px gray,  inset 0px 0px 6px 0px #2b2b2b;
     position: relative;
-    /* overflow: hidden; */
     animation: appear 0.9s;
-    /* background-color: rgb(103, 103, 103); */
     background: linear-gradient(#00000059 40%, var(--blue));
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 3px solid orange;
+}
 
-}
-/* main .right-section .project::before, main .right-section .project::after{
-    content: "";
-    position: absolute;
-    width: 2px;
-    background-color: orange;
-    height: 0;
-    transition: 0.5s;
-} */
-/* main .right-section .project::after{
-    top: 0;
-    left: 0;
-}
-main .right-section .project::before{
-    bottom: 0;
-    right: 0;
-} */
 main .right-section .project:hover{
     transform: translateY(-4px);
     box-shadow: 1px 1px 15px 5px gray ;
-    /* border-right: 5px solid orange;
-    border-left: 5px solid orange; */
 }
+
 main .project:hover::before, main .project:hover::after{
     height: 100%;
 }
+
 main .right-section .project img{
     width: 100%;
 }
+
 main .right-section .project article{
     padding: 0.9rem;
+}
+main .right-section .project article p{
+    line-height: 1.4rem;
 }
 
 main .right-section .project header{
     font-weight: bold;
     font-size: 1.3rem;
 }
+/*========================
+    Footer of right divs
+==========================*/
 
-main .right-section .project footer{
+main .right-section .project .footer :where(.links, h4){
+    gap: 0.2rem;
+    background-color: orange;
+    display: inline-flex;
+    border-top-right-radius: 6px;
+    box-shadow: 3px 4px 9px 0px #2b2b2b;
+}
+main .right-section .project .footer h4{
     padding: 0.5rem;
-    
 }
 
+main .right-section .project .footer span{
+    border-radius: 50%;
+    font-size: 1.3rem;
+}
+main .right-section .project .footer a{
+    padding: 0.5rem;
+    height: 100%;
+}
+main .right-section .project .footer a:hover{
+    background-color: rgba(255, 255, 255, 0.537);
+}
 
+/* in case there you didn't finsh a project */
+main .right-section .project .footer h4{
+    color: black;
+}
 
 /*========================
     media query

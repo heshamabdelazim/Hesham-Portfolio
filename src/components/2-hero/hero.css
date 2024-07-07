@@ -75,12 +75,7 @@ gap: 20px;
     color:var(--title);
 }
 .hero p{
-    /* color: rgb(161, 161, 170); */
-    color: var(--subtitle);
-    letter-spacing: 1rem;
-    word-spacing: 0.1rem;
-    letter-spacing: 0.06rem;
-    line-height: 2rem;
+    color: white;
 }
 
 
@@ -92,7 +87,7 @@ gap: 20px;
 }
 .hero .social a{
     /* color:rgb(161, 161, 170); */
-    color: var(--subtitle);
+    color: white;
     font-size: 20px;
 }
 .dark .hero .social a:hover{

@@ -9,6 +9,11 @@ import RightSection from "./right-section";
 import temp1 from "../../images/first_project.png";
 import temp2 from "../../images/second_project.png";
 import temp3 from "../../images/third_template.png";
+import weather from "../../images/Weather-app.png";
+import task from "../../images/Task.png";
+import calcu from "../../images/calculator.png";
+import port2 from "../../images/port2.png";
+import soon from "../../images/soon.png";
 
 const Main = () => {
   let [category, setCategory] = useState("All");
@@ -16,59 +21,67 @@ const Main = () => {
   const allProjects = [
     {
       photo: temp1,
-      head: "Template one",
+      head: "Template-one",
       para: "Contains 6 sections",
-      link: "NotYet",
-      website: "NotYet",
-      category: "Templates",
+      repo: "https://github.com/heshamabdelazim/template-1",
+      demoLink: "https://template-1-hesham.netlify.app/",
+      category: "templates",
     },
     {
       photo: temp2,
-      head: "Template Two",
+      head: "Template-Two",
       para: "Contains 6 sections",
-      link: "NotYet",
-      website: "NotYet",
-      category: "Templates",
+      repo: "https://github.com/heshamabdelazim/template-2",
+      demoLink: "https://template2-hesham.netlify.app",
+      category: "templates",
     },
     {
       photo: temp3,
-      head: "Template Three",
+      head: "Template-Three",
       para: "Contains 6 sections",
-      link: "NotYet",
-      website: "NotYet",
-      category: "Templates",
+      repo: "https://github.com/heshamabdelazim/template-3",
+      demoLink: "https://template-3-hesham.netlify.app",
+      category: "templates",
     },
     {
-      photo: temp1,
-      head: "react-app",
-      para: "Contains 6 sections",
-      link: "NotYet",
-      website: "NotYet",
-      category: "react-app",
+      photo: weather,
+      head: "Weather-App",
+      para: "It gives you the weather of a city with good UI and videos",
+      repo: "https://github.com/heshamabdelazim/weather-app",
+      demoLink: "https://weather-app-hesham.netlify.app",
+      category: "Apps",
     },
     {
-      photo: temp1,
-      head: "Templates",
-      para: "Contains 6 sections",
-      link: "NotYet",
-      website: "NotYet",
-      category: "Templates",
+      photo: task,
+      head: "Task-Timer",
+      para: "tracks my deadlines of tasks and helps me organize daily tasks. ",
+      repo: "https://github.com/heshamabdelazim/Task-Timer",
+      demoLink: "https://task-timer-hesham.netlify.app/",
+      category: "Apps",
     },
     {
-      photo: temp1,
-      head: "E-commerce",
-      para: "Contains 6 sections",
-      link: "NotYet",
-      website: "NotYet",
+      photo: calcu,
+      head: "Calculator",
+      para: "Does Addition, Subtraction, Multiplication & Division",
+      repo: "https://github.com/heshamabdelazim/Calculator",
+      demoLink: "https://calculator-hesham.netlify.app",
+      category: "Apps",
+    },
+    {
+      photo: port2,
+      head: "Personal-Slider",
+      para: "Contains 4 lides",
+      link: "https://github.com/heshamabdelazim/portfolio-2",
+      demoLink: "https://portfolio-2-hesham.netlify.app",
+      category: "templates",
+    },
+    {
+      photo: soon,
+      head: "E-Commerce",
+      para: "coming soon",
+      // link: "https://github.com/heshamabdelazim/template-1",
+      // demoLink: "template-1-hesham.netlify.app",
       category: "E-commerce",
-    },
-    {
-      photo: temp1,
-      head: "PHP backend",
-      para: "Contains 6 sections",
-      link: "NotYet",
-      website: "NotYet",
-      category: "PHP backend",
     },
   ];
   // ====================================================
@@ -82,7 +95,7 @@ const Main = () => {
   };
   // ====================================================
   function pressed(e) {
-    //  This function to put class active and re-render when the user press on taps
+    //  This function to (put class active) and (re-render) when the user press on taps
     let allTaps = document.querySelectorAll(".main .left-section div");
     allTaps.forEach((div) => {
       div.className = "";
@@ -101,6 +114,7 @@ const Main = () => {
       });
     }
   };
+
   return (
     <main className="main " id="projects">
       <div className="container d-flex">

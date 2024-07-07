@@ -141,6 +141,11 @@ a{
   scale: 0.9;
 }
 
+.parag{
+  word-spacing: 0.1rem;
+  letter-spacing: 0.06rem;
+  line-height: 2rem;
+}
   /* =============================
         media query
 ================================*/
