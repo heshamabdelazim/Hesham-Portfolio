@@ -58,7 +58,7 @@ const Main = () => {
     {
       photo: task,
       head: "Task-Timer",
-      para: "tracks my deadlines of tasks and helps me organize daily tasks. ",
+      para: "Tracks and orgaise my daily tasks.",
       repo: "https://github.com/heshamabdelazim/Task-Timer",
       demoLink: "https://task-timer-hesham.netlify.app/",
       category: "Apps",
