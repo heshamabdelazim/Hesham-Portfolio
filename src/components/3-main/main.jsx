@@ -22,26 +22,29 @@ const Main = () => {
     {
       photo: temp1,
       head: "Template-one",
-      para: "Contains 6 sections",
+      para: "First apply on HTML + CSS",
       repo: "https://github.com/heshamabdelazim/template-1",
       demoLink: "https://template-1-hesham.netlify.app/",
       category: "templates",
+      icon: "icon-css3",
     },
     {
       photo: temp2,
       head: "Template-Two",
-      para: "Contains 6 sections",
+      para: "Second apply on HTML + CSS",
       repo: "https://github.com/heshamabdelazim/template-2",
       demoLink: "https://template2-hesham.netlify.app",
       category: "templates",
+      icon: "icon-css3",
     },
     {
       photo: temp3,
       head: "Template-Three",
-      para: "Contains 6 sections",
+      para: "Third apply on HTML + CSS",
       repo: "https://github.com/heshamabdelazim/template-3",
       demoLink: "https://template-3-hesham.netlify.app",
       category: "templates",
+      icon: "icon-css3",
     },
     {
       photo: weather,
@@ -50,6 +53,7 @@ const Main = () => {
       repo: "https://github.com/heshamabdelazim/weather-app",
       demoLink: "https://weather-app-hesham.netlify.app",
       category: "Apps",
+      icon: "icon-react",
     },
     {
       photo: task,
@@ -58,6 +62,7 @@ const Main = () => {
       repo: "https://github.com/heshamabdelazim/Task-Timer",
       demoLink: "https://task-timer-hesham.netlify.app/",
       category: "Apps",
+      icon: "icon-react",
     },
     {
       photo: calcu,
@@ -66,14 +71,16 @@ const Main = () => {
       repo: "https://github.com/heshamabdelazim/Calculator",
       demoLink: "https://calculator-hesham.netlify.app",
       category: "Apps",
+      icon: "icon-javascript",
     },
     {
       photo: port2,
       head: "Personal-Slider",
-      para: "Contains 4 lides",
+      para: "Contains 4 Slides",
       link: "https://github.com/heshamabdelazim/portfolio-2",
       demoLink: "https://portfolio-2-hesham.netlify.app",
       category: "templates",
+      icon: "icon-react",
     },
     {
       photo: soon,
@@ -127,7 +134,6 @@ const Main = () => {
               {tap}
             </div>
           ))}
-          {/* <div onClick={(e) => pressed(e)}>three</div> */}
         </section>
         <RightSection dataRevealed={dataRevealed()} />
       </div>

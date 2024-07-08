@@ -1,4 +1,5 @@
 const RightSection = ({ dataRevealed }) => {
+  console.log(dataRevealed.i);
   return (
     <div className="right-section">
       {dataRevealed.map((project, index) => (
@@ -24,6 +25,8 @@ const RightSection = ({ dataRevealed }) => {
               <h4>Soon</h4>
             )}
           </div>
+          {/* THe following code is showing icon, So the project is still working the clock will be else the object icon */}
+          <i className={project.demoLink ? project.icon : "icon-stopwatch"} />
         </div>
       ))}
     </div>

@@ -29,7 +29,7 @@ export function App() {
       <Footer />
       <a
         href="#header"
-        className="icon-arrow-up"
+        className="icon-arrow-up2"
         style={{ opacity: arrowTop ? 1 : 0, transition: "0.3s" }}
       />
     </>

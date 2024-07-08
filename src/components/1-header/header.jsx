@@ -5,7 +5,7 @@ const Header = () => {
   let [show, setShow] = useState(false);
   // let [mood, setMood] = useState("");
   const lightMood = { mood: "light", icon: "icon-sun" };
-  const darkMood = { mood: "dark", icon: "icon-moon" };
+  const darkMood = { mood: "dark", icon: "icon-moon1" };
 
   // =========================
   useEffect(() => {
@@ -61,7 +61,7 @@ const Header = () => {
           className={
             localStorage.getItem("mood") === "light"
               ? "icon-sun mood"
-              : "icon-moon" + " mood"
+              : "icon-moon1" + " mood"
           }
           onClick={(e) => {
             switching(e);
