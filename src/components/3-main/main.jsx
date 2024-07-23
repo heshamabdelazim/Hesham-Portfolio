@@ -14,6 +14,7 @@ import task from "../../images/Task.png";
 import calcu from "../../images/calculator.png";
 import port2 from "../../images/port2.png";
 import soon from "../../images/soon.png";
+import design from "../../images/designAgency.jpg";
 
 const Main = () => {
   let [category, setCategory] = useState("All");
@@ -77,10 +78,19 @@ const Main = () => {
       photo: port2,
       head: "Personal-Slider",
       para: "Contains 4 Slides",
-      link: "https://github.com/heshamabdelazim/portfolio-2",
+      repo: "https://github.com/heshamabdelazim/portfolio-2",
       demoLink: "https://portfolio-2-hesham.netlify.app",
       category: "templates",
       icon: "icon-react",
+    },
+    {
+      photo: design,
+      head: "Desgin-Agency",
+      para: "It contains home page, about page & blogs.",
+      repo: "https://github.com/heshamabdelazim/Design-Agency",
+      demoLink: "https://desgin-agency-hesham.netlify.app",
+      category: "Apps",
+      icon: "icon-next-dot-js",
     },
     {
       photo: soon,
