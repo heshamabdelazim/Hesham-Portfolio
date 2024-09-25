@@ -13,8 +13,10 @@ import weather from "../../images/Weather-app.png";
 import task from "../../images/Task.png";
 import calcu from "../../images/calculator.png";
 import port2 from "../../images/port2.png";
-import soon from "../../images/soon.png";
+import soon from "../../images/soon.webp";
 import design from "../../images/designAgency.jpg";
+import eCommerce from "../../images/e-commerce.jpg";
+// import Instagram from "../../images/instagram-delete-later.webp"
 
 const Main = () => {
   let [category, setCategory] = useState("All");
@@ -93,12 +95,22 @@ const Main = () => {
       icon: "icon-next-dot-js",
     },
     {
-      photo: soon,
-      head: "E-Commerce",
-      para: "coming soon",
-      // link: "https://github.com/heshamabdelazim/template-1",
-      // demoLink: "template-1-hesham.netlify.app",
+      photo: eCommerce,
+      head: "Courses E-Commerce",
+      para: "Integrated with Clerk + Strapi to sign-up, choose & delete products ",
+      link: "https://github.com/heshamabdelazim/courses-Ecommerce",
+      demoLink: "https://main--courses-ecommerce-hesham.netlify.app/",
       category: "E-commerce",
+      icon: "icon-next-dot-js",
+    },
+    {
+      photo: soon,
+      head: "Instegram Clone",
+      para: "Comming Soon ",
+      // link: "https://github.com/heshamabdelazim/courses-Ecommerce",
+      // demoLink: "https://main--courses-ecommerce-hesham.netlify.app/",
+      category: "Apps",
+      // icon: "icon-next-dot-js",
     },
   ];
   // ====================================================

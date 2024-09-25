@@ -9,7 +9,7 @@ const RightSection = ({ dataRevealed }) => {
             <h2>
               {project.head} {!project.demoLink && "- (soon)"}
             </h2>
-            <p className="parag">{project.para}</p>
+            <p>{project.para}</p>
           </article>
           <div className="footer ">
             {project.demoLink ? (
