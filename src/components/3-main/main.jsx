@@ -16,6 +16,7 @@ import port2 from "../../images/port2.png";
 import soon from "../../images/soon.webp";
 import design from "../../images/designAgency.jpg";
 import eCommerce from "../../images/e-commerce.jpg";
+import exam from "../../images/exam.jpg";
 // import Instagram from "../../images/instagram-delete-later.webp"
 
 const Main = () => {
@@ -98,16 +99,25 @@ const Main = () => {
       photo: eCommerce,
       head: "Courses E-Commerce",
       para: "Integrated with Clerk + Strapi to sign-up, choose & delete products ",
-      link: "https://github.com/heshamabdelazim/courses-Ecommerce",
+      repo: "https://github.com/heshamabdelazim/courses-Ecommerce",
       demoLink: "https://main--courses-ecommerce-hesham.netlify.app/",
       category: "E-commerce",
+      icon: "icon-next-dot-js",
+    },
+    {
+      photo: exam,
+      head: "Exam-App",
+      para: "Every user has details to display Also exam Interface",
+      repo: "https://github.com/heshamabdelazim/exam-app",
+      demoLink: "https://exam-hesham.netlify.app/",
+      category: "Apps",
       icon: "icon-next-dot-js",
     },
     {
       photo: soon,
       head: "Instegram Clone",
       para: "Comming Soon ",
-      // link: "https://github.com/heshamabdelazim/courses-Ecommerce",
+      // repo: "https://github.com/heshamabdelazim/courses-Ecommerce",
       // demoLink: "https://main--courses-ecommerce-hesham.netlify.app/",
       category: "Apps",
       // icon: "icon-next-dot-js",
