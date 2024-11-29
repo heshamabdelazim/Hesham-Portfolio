@@ -4,7 +4,7 @@ function MyIcons({ allSocial }) {
   return (
     <>
       {allSocial.map((obj, ind) => (
-        <a className={obj.icon} key={ind} />
+        <a className={obj.icon} key={ind} href={obj.href} title={obj.title} />
       ))}
     </>
   );
