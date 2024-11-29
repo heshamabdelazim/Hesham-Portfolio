@@ -5,7 +5,7 @@ import me from "../../images/H image.jpg";
 // lottie-react for animation
 import Lottie from "lottie-react";
 import programmingAnimation from "./../../animation/coding.json";
-import MyIcon from "./MyIcon";
+import MyIcons from "./MyIcons";
 
 const Hero = () => {
   const allSocial = [
@@ -45,7 +45,7 @@ const Hero = () => {
             science(physics) - Damanhour University.
           </p>
           <div className="social d-flex">
-            <MyIcon allSocial={allSocial} />
+            <MyIcons allSocial={allSocial} />
           </div>
         </section>
         {/* <section className="animation border">animation</section> */}
