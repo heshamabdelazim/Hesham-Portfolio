@@ -126,10 +126,7 @@ const Main = () => {
   // ====================================================
   const allTaps = () => {
     // This function to creates taps that belongs to the projects (left-section)
-    const arrayOfTaps = [];
-    allProjects.map((project) => {
-      arrayOfTaps.push(project.category);
-    });
+    const arrayOfTaps = allProjects.map((project) => project.category);
     return Array.from(new Set(arrayOfTaps));
   };
   // ====================================================

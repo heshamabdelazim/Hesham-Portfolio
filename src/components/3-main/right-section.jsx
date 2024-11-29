@@ -4,7 +4,7 @@ const RightSection = ({ dataRevealed }) => {
     <div className="right-section">
       {dataRevealed.map((project, index) => (
         <div className="project round" key={index + 1}>
-          <img src={project.photo} alt={`${project.head} photo`} />
+          <img src={project.photo} alt={`${project.head}`} />
           <article>
             <h2>
               {project.head} {!project.demoLink && "- (soon)"}

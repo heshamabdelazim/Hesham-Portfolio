@@ -1,0 +1,24 @@
+{
+  "allSocial": [
+    {
+      "icon": "icon-github",
+      "href": "https://github.com/heshamabdelazim",
+      "title": "GitHub"
+    },
+    {
+      "icon": "icon-envelope",
+      "href": "mailto:heshamabdelazim3@gmail.com",
+      "title": "Gmail"
+    },
+    {
+      "icon": "icon-facebook2",
+      "href": "https://www.facebook.com/hesham.abdelazim.94",
+      "title": "FaceBook"
+    },
+    {
+      " icon": "icon-linkedin",
+      "href": "https://www.linkedin.com/in/hesham-abdelazim-678759283/",
+      "title": "LinkedIn"
+    }
+  ]
+}
