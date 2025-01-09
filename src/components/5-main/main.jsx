@@ -2,8 +2,6 @@ import React, { useState } from "react";
 //css
 import "./main.css";
 // components
-import rightSection from "./right-section";
-import RightSection from "./right-section";
 
 // images
 import temp1 from "../../images/first_project.png";
@@ -17,6 +15,7 @@ import soon from "../../images/soon.webp";
 import design from "../../images/designAgency.jpg";
 import eCommerce from "../../images/e-commerce.jpg";
 import exam from "../../images/exam.jpg";
+import Project from "./Project";
 // import Instagram from "../../images/instagram-delete-later.webp"
 
 const Main = () => {
@@ -150,9 +149,9 @@ const Main = () => {
       });
     }
   };
-
   return (
     <main className="main " id="projects">
+      <h2 className="title">Projects</h2>
       <div className="container d-flex">
         <section className="left-section d-flex">
           <div onClick={(e) => pressed(e)} className="active">
@@ -164,7 +163,12 @@ const Main = () => {
             </div>
           ))}
         </section>
-        <RightSection dataRevealed={dataRevealed()} />
+        <section className="right-section">
+          {dataRevealed().map((project, index) => (
+            <Project key={index + 1} project={project} />
+          ))}
+        </section>
+        {/* <RightSection dataRevealed={dataRevealed()} /> */}
       </div>
     </main>
   );

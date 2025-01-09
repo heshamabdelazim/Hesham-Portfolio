@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import Header from "./components/1-header/header";
 import Hero from "./components/2-hero/hero";
-import Main from "./components/3-main/main";
-import Contact from "./components/4-contact/Contact";
-import Footer from "./components/5-footer/Footer";
+import About from "./components/3-about/About";
+import Study from "./components/4-Study/Study";
+import Main from "./components/5-main/main";
+import Contact from "./components/6-contact/Contact";
+import Footer from "./components/7-footer/Footer";
 
 export function App() {
   let [arrowTop, setArrowTop] = useState(false);
@@ -21,7 +23,11 @@ export function App() {
         <Header />
         <Hero />
       </div>
-
+      <div className="divider" />
+      <About />
+      <div className="divider" />
+      {/* <Study />
+      <div className="divider" /> */}
       <Main />
       <div className="divider" />
       <Contact />

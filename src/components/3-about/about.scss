@@ -1,0 +1,84 @@
+$distance : 6px;
+$labelFont : 20px;
+$radius:20px;
+@mixin pesaudoLabel{
+    position: absolute;
+    font-weight: bold;
+    color: var(--primary);
+    z-index: -1;
+}
+section.about{
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+    gap: 3rem;
+
+    .img-tech{
+        position: relative;
+        .img-container{
+            position: relative;
+            overflow: hidden;
+            width: fit-content;
+            border-radius: $radius;
+            overflow: hidden;
+            .bg-orange{
+                width: 100%;
+                height: 100%;
+                box-shadow: inset 30px 30px orange;
+                position: absolute;
+                top: -4px;
+                left: 0;
+                z-index: -2;
+                border-radius: $radius;
+            }
+            .my-img{
+                /* border: 2px solid green; */
+                width: 200px;
+                
+                animation: changeBg 3s alternate infinite;
+                position: relative;
+            }
+            &:before{
+                content: "Front-End Dev";
+                top: 1px;
+                font-size: $labelFont;
+                left: 50%;
+                transform: translatex(-50%);
+                width: 100%;
+                text-align: center;
+                @include pesaudoLabel;
+            }
+            &:after{
+                content: "Tester Dev";
+                transform: rotate(90deg) translatey(-50%);
+                left: -43px;
+                font-size: $labelFont;
+                top: 35%;
+                @include pesaudoLabel;
+            }
+    }
+        .slider-icons{
+            display: flex;
+            gap: 5px;
+            position: absolute;
+            z-index: -1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            
+        }
+    }
+    .desc{
+        font-size: 1.2rem;
+    }
+}
+
+
+// @keyframes changeBg {
+//     from {
+//         box-shadow: inset 10px 20px orange;
+//     }
+//     to{
+//         box-shadow: inset 10px 20x 5px orangered;
+//     }
+// }

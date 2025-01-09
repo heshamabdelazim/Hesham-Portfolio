@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?h8i65o');
-  src:  url('fonts/icomoon.eot?h8i65o#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?h8i65o') format('truetype'),
-    url('fonts/icomoon.woff?h8i65o') format('woff'),
-    url('fonts/icomoon.svg?h8i65o#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?2jchsw');
+  src:  url('fonts/icomoon.eot?2jchsw#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?2jchsw') format('truetype'),
+    url('fonts/icomoon.woff?2jchsw') format('woff'),
+    url('fonts/icomoon.svg?2jchsw#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -66,6 +66,14 @@
   content: "\e908";
   color: #d14836;
 }
+.icon-html5:before {
+  content: "\e911";
+  color: #e34f26;
+}
+.icon-java:before {
+  content: "\e912";
+  color: #007396;
+}
 .icon-javascript:before {
   content: "\e901";
   color: #f7df1e;
@@ -73,9 +81,17 @@
 .icon-next-dot-js:before {
   content: "\e910";
 }
+.icon-postman:before {
+  content: "\e913";
+  color: #ff6c37;
+}
 .icon-react:before {
   content: "\e902";
   color: #61dafb;
+}
+.icon-sass:before {
+  content: "\e914";
+  color: #c69;
 }
 .icon-whatsapp:before {
   content: "\e907";

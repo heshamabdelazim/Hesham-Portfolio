@@ -8,6 +8,15 @@ import programmingAnimation from "./../../animation/coding.json";
 import MyIcons from "./MyIcons";
 
 const Hero = () => {
+  /*
+  Student[] x;
+  
+  Student[] x= [{
+    new Student ("ah",34,)
+  },{
+  }];
+
+  */
   const allSocial = [
     {
       icon: "icon-github",
@@ -41,8 +50,8 @@ const Hero = () => {
           </div>
           <h1>Hesham Abdelazim Kamel</h1>
           <p className="parag">
-            Front-End Developer using ReactJs. <br /> Graduated from faculty of
-            science(physics) - Damanhour University.
+            Front-End Developer / Testing Developer <br /> Graduated from
+            faculty of science(physics) - Damanhour University.
           </p>
           <div className="social d-flex">
             <MyIcons allSocial={allSocial} />
