@@ -1,7 +1,6 @@
 import React from "react";
 
 function Project({ project }) {
-  console.log(project);
   return (
     <div className="project round">
       <img src={project.photo} alt={`${project.head}`} />

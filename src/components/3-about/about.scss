@@ -1,78 +1,136 @@
 $distance : 6px;
 $labelFont : 20px;
 $radius:20px;
+$large-below: "max-width:1320px";
+$medium-below:"max-width:992px";
+$small-below:"max-width:767px";
+$rotateX : -38%;
+
+
+
 @mixin pesaudoLabel{
     position: absolute;
     font-weight: bold;
     color: var(--primary);
     z-index: -1;
 }
-section.about{
+@mixin flexCenter{
     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin positionMiddle{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+section.about{
+    overflow: hidden;
     flex-direction: column;
     align-items: center ;
-    gap: 3rem;
-
-    .img-tech{
-        position: relative;
-        .img-container{
-            position: relative;
-            overflow: hidden;
-            width: fit-content;
-            border-radius: $radius;
-            overflow: hidden;
-            .bg-orange{
-                width: 100%;
-                height: 100%;
-                box-shadow: inset 30px 30px orange;
-                position: absolute;
-                top: -4px;
-                left: 0;
-                z-index: -2;
-                border-radius: $radius;
-            }
-            .my-img{
-                /* border: 2px solid green; */
-                width: 200px;
-                
-                animation: changeBg 3s alternate infinite;
+    display: flex;
+    gap: 5.6rem;
+    .container{
+        perspective:1000px; //for 3d
+        position: relative;}
+        .section-body{
+            margin-top: 2.2rem;
+            @include flexCenter;
+            flex-direction: row-reverse;
+            gap: 4.2rem;
+            .img-container{
                 position: relative;
-            }
-            &:before{
-                content: "Front-End Dev";
-                top: 1px;
-                font-size: $labelFont;
-                left: 50%;
-                transform: translatex(-50%);
-                width: 100%;
-                text-align: center;
-                @include pesaudoLabel;
-            }
-            &:after{
-                content: "Tester Dev";
-                transform: rotate(90deg) translatey(-50%);
-                left: -43px;
-                font-size: $labelFont;
-                top: 35%;
-                @include pesaudoLabel;
-            }
-    }
-        .slider-icons{
+                overflow: hidden;
+                width: fit-content;
+                border-radius: $radius;
+                overflow: hidden;
+                z-index: 1;
+                @include flexCenter;
+                flex-basis: 20%;
+                .bg-orange{
+                    width: 97%;
+                    height: 66%;
+                    box-shadow: inset 30px 30px var(--orange);
+                    position: absolute;
+                    top: -4px;
+                    left: 0;
+                    z-index: -2;
+                    border-radius: $radius;
+                }
+                .my-img{
+                    /* border: 2px solid green; */
+                    width: 200px;
+                    animation: changeBg 20s alternate infinite;
+                    position: relative;
+                }
+                &:before{
+                    content: "Front-End Dev";
+                    top: 1px;
+                    font-size: $labelFont;
+                    left: 50%;
+                    transform: translatex(-50%);
+                    width: 100%;
+                    text-align: center;
+                    @include pesaudoLabel;
+                }
+                &:after{
+                    content: "Tester Dev";
+                    transform: rotate(90deg) translatey(-50%);
+                    left: -43px;
+                    font-size: $labelFont;
+                    top: 35%;
+                    @include pesaudoLabel;
+                }
+        }
+        }
+
+        .desc{
+            // font-size: 1.2rem;
+            font-size: clamp(1rem, 2vw, 1.2rem); 
+            color: var(--title);
+            background-color: #8282823b;
+            padding: 1rem;
+            border-radius: 20px;
+        }
+        .slider{
             display: flex;
-            gap: 5px;
-            position: absolute;
+            justify-content: center;
+            align-items: center;
             z-index: -1;
+            width: 500px;
+            height: 500px;
+            position: absolute;
+            border-radius: 50%;
             top: 50%;
             left: 50%;
-            transform: translate(-50%,-50%);
-            
-        }
+            transform: translate($rotateX, -50%) rotate3d(2, 1, 0, 52deg) ;
+            animation: infinite linear sliderRotate 90s ;
+            opacity: 0.5;
+            .icon-container{
+                font-size: 5rem;
+                // background: #5ab4f021;
+                border-radius: 25%;
+                padding: 1.2rem;
+                position: absolute;
+                overflow: hidden;
+                @include positionMiddle; //top here is 50%
+                top: 0; //but here top override
+                inset: -303px;
+                text-align: center;
+                span{
+                    display: inline-block;
+                    transform: rotate(175deg);
+                    padding: 0.6rem;
+                    // background-color: rgb(255, 255, 255);
+                    border-radius: 10%;
+                }
+                
+            }
+        } 
     }
-    .desc{
-        font-size: 1.2rem;
-    }
-}
 
+//992
+//768
 
 // @keyframes changeBg {
 //     from {
@@ -82,3 +140,27 @@ section.about{
 //         box-shadow: inset 10px 20x 5px orangered;
 //     }
 // }
+@keyframes sliderRotate {
+    from{transform: translate($rotateX, -50%) rotate3d(2, 1, 0, 49deg) rotate(0);}
+    to{transform: translate($rotateX, -50%) rotate3d(2, 1, 0, 49deg) rotate(360deg);}
+}
+
+@media ($large-below){
+    .about .section-body{
+        $rotatex:-38% !important;
+        flex-direction: column !important;
+    }
+}
+@media ($medium-below){ //992
+    
+    .about .section-body{
+        gap: 2.2rem !important;
+    }
+
+}
+@media ($small-below){//767
+    .icon-container{
+            inset: -200px !important;
+        
+    }
+}
