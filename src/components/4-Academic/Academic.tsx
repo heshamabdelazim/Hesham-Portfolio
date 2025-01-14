@@ -7,7 +7,7 @@ function Academic() {
   const [chosenTap, setChosenTap] = useState();
   const [openFigure,setOpenFigure] = useState();
   useEffect(() => {
-    fetchingData("/public/project-details/my-Details.json", setData);
+    fetchingData("../../../public/project-details/my-Details.json", setData);
   }, []);
 
   useEffect(() => {

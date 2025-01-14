@@ -4,7 +4,11 @@ import "./about.scss";
 import myImage from "../../../public/images/formal-removebg-preview.png";
 
 function About() {
-  const importantSpan = {
+  interface spanStyle{
+    color: String,
+    fontWeight:String,
+  }
+  const importantSpan :spanStyle = {
     color: "var(--orange)",
     fontWeight: "bold",
   };
