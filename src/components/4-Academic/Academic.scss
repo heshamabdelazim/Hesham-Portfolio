@@ -1,0 +1,120 @@
+section#study{
+    .section-body{
+        gap: 1.8rem;
+        align-items: flex-start;
+        ul.taps{
+            display: flex;
+            flex-basis: 25%;
+            flex-direction: column;
+            gap: 1.4rem;
+            padding: 0.7rem;
+            border-radius: var(--btn-border-radius);
+            .tap{
+                display: flex;
+                gap: 0.5rem;
+                justify-content: flex-start;
+                text-align: start;
+                &.active img{background-color: white;}
+                img{
+                    width: 36px;
+                    height: 28px;
+                    object-fit: contain;
+                    border-radius: 15%;
+                }
+                &:hover{
+                    img{
+                        background-color: white;
+                    }
+                }
+            }
+        }
+        .tap-details{
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            gap: 2.8rem;
+            letter-spacing: 0.02rem;
+            h3{
+                color: orange;
+                position: relative;
+                margin-bottom: 1rem;
+            &::before{
+                content: "";
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: orange;
+                top: 50%;
+                left: 0;
+                transform: translate(-150%,-50%);
+            }
+        }
+                .imgs-holder{
+                    display: flex;
+                    gap: 1.2rem;
+                    img{
+                        width: 250px;
+                        height: 180px;
+                        object-fit: contain;
+                    }
+                }
+                figure{
+                    cursor: pointer;
+                    transition: 0.6s;
+                    &:hover{
+                        scale: 1.08;
+                    }
+                    figcaption{
+                        text-align: center;
+                        color: var(--text);
+                    }
+                }
+            }
+        }
+        .showFig{
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 99;
+            background-color: rgba(0, 0, 0, 0.311);
+            img{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                animation:0.6s showFig forwards;
+                object-fit: contain;
+                width: 100%;
+                height: 100%;
+                position: relative;
+            }
+            span{
+                position: absolute;
+                top: 10px;
+                right: 10%;
+                background-color: black;
+                padding: 0.7rem 1rem;
+                border-radius: 50%;
+                cursor: pointer;
+                z-index: 1;
+                font-size: 1.2rem;
+                opacity: 0.6;
+                &:hover{
+                    opacity: 1;
+                    scale: 1.1  ;
+                    color: orangered    ;
+                }
+            }
+        }
+    }
+
+    @keyframes showFig {
+        from{
+            transform:  scale(0.6);
+        }
+        to{
+            transform:  scale(1);
+        }
+    }

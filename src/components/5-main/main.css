@@ -2,7 +2,7 @@
     table contents
 ==========================
 
-- main design: 
+- section#projects design: 
 - left section
 - right section
 - every project(div) in the right section
@@ -17,63 +17,34 @@
 
 
 /*========================
-    main design
+    section#projects design
 ==========================*/
-main{
-    min-height: 85vh;
-}
-main .container{
+section#projects .section-body{
     gap: 2rem;
     justify-content: space-between;
     align-items: flex-start;
+    /* margin-top: ; */
 }
 
 /*========================
     Left section
 ==========================*/
-main .left-section{
+section#projects .left-section{
     flex-direction: column;
     gap: 2rem;
     align-items: stretch;
     position: sticky;
     top: 30px;
 }
-main .left-section div{
-    padding: 1rem;
-    background-color: var(--secondary);
-    min-width:11.8rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    color: var(--subtitle);
-    font-size: 1.4rem;
-    text-transform: capitalize;
-    cursor: pointer;
-    opacity: 0.7;
-    transition: 0.5s , color 0.5s 0.1s;
-    box-sizing: border-box;
-    border-radius: 6px;
-    text-align: center;
-}
 
-main .left-section div:hover,main .left-section div.active{
-    background-color: rgb(103, 103, 103);
-    color: white;
-    border-right: 3px solid var(--blue);
-    border-left: 3px solid var(--blue);
-    letter-spacing: 2px;
-    opacity: 1;
-}
-
-main .left-section div:active{
+section#projects .left-section div:active{
     scale: 0.9;
 }
 
 /*========================
     right section
 ==========================*/
-main .right-section{
+section#projects .right-section{
     flex-grow: 1;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -83,7 +54,7 @@ main .right-section{
 /*========================
     every project(div) in the right section
 ==========================*/
-main .right-section .project{
+section#projects .right-section .project{
     color: white;
     border-radius: 6px;
     transition: 0.5s linear;
@@ -99,7 +70,7 @@ main .right-section .project{
     border: 3px solid orange;
     /* font-size: clamp(1rem, calc(1.2vw + 0.5rem), 2rem); */
 }
-main .right-section .project i{
+section#projects .right-section .project i{
     position: absolute;
     font-size: 3rem;
     right: 10%;
@@ -109,30 +80,30 @@ main .right-section .project i{
 
 }
 
-main .right-section .project:hover{
+section#projects .right-section .project:hover{
     transform: translateY(-4px);
     box-shadow: 1px 1px 15px 5px gray ;
 }
 
-main .project:hover::before, main .project:hover::after{
+section#projects .project:hover::before, section#projects .project:hover::after{
     height: 100%;
 }
 
-main .right-section .project img{
+section#projects .right-section .project img{
     width: 100%;
 }
 
-main .right-section .project article{
+section#projects .right-section .project article{
     padding: 0.9rem;
 }
-main .right-section .project article p{
+section#projects .right-section .project article p{
     line-height: 1.4rem;
     position: relative;
     z-index: 2;
     width: 80%;
 }
 
-main .right-section .project header{
+section#projects .right-section .project header{
     font-weight: bold;
     font-size: 1.3rem;
 }
@@ -140,31 +111,31 @@ main .right-section .project header{
     Footer of right divs
 ==========================*/
 
-main .right-section .project .footer :where(.links, h4){
+section#projects .right-section .project .footer :where(.links, h4){
     gap: 0.2rem;
     background-color: orange;
     display: inline-flex;
     border-top-right-radius: 6px;
     box-shadow: 3px 4px 9px 0px #2b2b2b;
 }
-main .right-section .project .footer h4{
+section#projects .right-section .project .footer h4{
     padding: 0.5rem;
 }
 
-main .right-section .project .footer span{
+section#projects .right-section .project .footer span{
     border-radius: 50%;
     font-size: 1.3rem;
 }
-main .right-section .project .footer a{
+section#projects .right-section .project .footer a{
     padding: 0.5rem;
     /* height: 100%; */
 }
-main .right-section .project .footer a:hover{
+section#projects .right-section .project .footer a:hover{
     background-color: rgba(255, 255, 255, 0.537);
 }
 
 /* in case there you didn't finsh a project */
-main .right-section .project .footer h4{
+section#projects .right-section .project .footer h4{
     color: black;
 }
 
@@ -172,42 +143,42 @@ main .right-section .project .footer h4{
     media query
 ==========================*/
 @media(max-width:992px){
-    main .left-section div{
+    section#projects .left-section div{
         font-size: 1rem;
     }
 }
 @media(max-width:768px){
-    main .container{
+    section#projects .container{
         gap: 0.7rem;
         /* flex-direction: column; */
     }
-    main .left-section{
+    section#projects .left-section{
         /* flex-direction: row; */
         gap: 1rem;
     }
-    main .left-section div{
+    section#projects .left-section div{
         padding:0.6rem ;
         min-width:fit-content;
     }
-    main .left-section div:hover,main .left-section div.active{
+    section#projects .left-section div:hover,section#projects .left-section div.active{
         letter-spacing: unset;
     }
-    /* main .right-section{
+    /* section#projects .right-section{
         grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
         } */
         
     }
 @media(max-width:550px){
-    main .right-section .project{
+    section#projects .right-section .project{
         font-size:0.7rem ;
     }
-    main .right-section .project .footer a{
+    section#projects .right-section .project .footer a{
         padding: 0.2rem;
     }
-    main .right-section .project .footer span{
+    section#projects .right-section .project .footer span{
         font-size: 1rem;
     }
-    main .right-section{
+    section#projects .right-section{
         grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
     }
 }

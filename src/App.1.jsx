@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Header from "./components/1-header/header";
 import Hero from "./components/2-hero/hero";
 import About from "./components/3-about/About";
-import Study from "./components/4-Study/Study";
+import Academic from "./components/4-Academic/Academic";
 import Main from "./components/5-main/main";
 import Contact from "./components/6-contact/Contact";
 import Footer from "./components/7-footer/Footer";
@@ -18,16 +18,16 @@ export function App() {
   });
   return (
     <>
-      <div className=" openning ">
+      <section className=" openning ">
         {/* This element that has background-image */}
         <Header />
         <Hero />
-      </div>
+      </section>
       <div className="divider" />
       <About />
       <div className="divider" />
-      {/* <Study />
-      <div className="divider" /> */}
+      <Academic />
+      <div className="divider" />
       <Main />
       <div className="divider" />
       <Contact />

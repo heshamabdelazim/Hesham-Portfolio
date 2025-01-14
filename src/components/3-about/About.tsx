@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./about.scss";
 
-import myImage from "../../images/formal-removebg-preview.png";
+import myImage from "../../../public/images/formal-removebg-preview.png";
 
 function About() {
   const importantSpan = {

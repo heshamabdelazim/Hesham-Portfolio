@@ -34,7 +34,6 @@ section.about{
         perspective:1000px; //for 3d
         position: relative;}
         .section-body{
-            margin-top: 2.2rem;
             @include flexCenter;
             flex-direction: row-reverse;
             gap: 4.2rem;

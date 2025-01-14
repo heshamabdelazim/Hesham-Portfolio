@@ -1,40 +1,26 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./hero.css";
 
-import me from "../../images/H image.jpg";
+import me from "/public/images/H image.jpg";
 // lottie-react for animation
 import Lottie from "lottie-react";
 import programmingAnimation from "./../../animation/coding.json";
 import MyIcons from "./MyIcons";
+import { fetchingData } from "../../utilis/fetch";
 
 const Hero = () => {
-  const allSocial = [
-    {
-      icon: "icon-github",
-      href: "https://github.com/heshamabdelazim",
-      title: "GitHub",
-    },
-    {
-      icon: "icon-envelope",
-      href: "mailto:heshamabdelazim3@gmail.com",
-      title: "Gmail",
-    },
-    {
-      icon: "icon-facebook2",
-      href: "https://www.facebook.com/hesham.abdelazim.94",
-      title: "FaceBook",
-    },
-    {
-      icon: "icon-linkedin",
-      href: "https://www.linkedin.com/in/hesham-abdelazim-kamel/",
-      title: "LinkedIn",
-    },
-  ];
+  const [allSocial, setAllSocial] = useState();
+  useEffect(() => {
+    fetchingData("/public/project-details/social.json", setAllSocial);
+  }, []);
+  console.log(allSocial);
+  console.log(me);
+  console.log("/public/images/H image.jpg");
 
   return (
     <div className="hero ">
       <div className="container d-flex ">
-        <section className="details d-flex ">
+        <div className="details d-flex ">
           <div className="image">
             <img src={me} alt="H-image" />
             <span className="icon-verified verify"></span>
@@ -47,7 +33,7 @@ const Hero = () => {
           <div className="social d-flex">
             <MyIcons allSocial={allSocial} />
           </div>
-        </section>
+        </div>
         {/* <section className="animation border">animation</section> */}
         <Lottie
           animationData={programmingAnimation}

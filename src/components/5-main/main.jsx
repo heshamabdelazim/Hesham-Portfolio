@@ -4,17 +4,17 @@ import "./main.css";
 // components
 
 // images
-import temp1 from "../../images/first_project.png";
-import temp2 from "../../images/second_project.png";
-import temp3 from "../../images/third_template.png";
-import weather from "../../images/Weather-app.png";
-import task from "../../images/Task.png";
-import calcu from "../../images/calculator.png";
-import port2 from "../../images/port2.png";
-import soon from "../../images/soon.webp";
-import design from "../../images/designAgency.jpg";
-import eCommerce from "../../images/e-commerce.jpg";
-import exam from "../../images/exam.jpg";
+import temp1 from "/public/images/first_project.png";
+import temp2 from "/public/images/second_project.png";
+import temp3 from "/public/images/third_template.png";
+import weather from "/public/images/Weather-app.png";
+import task from "/public/images/Task.png";
+import calcu from "/public/images/calculator.png";
+import port2 from "/public/images/port2.png";
+import soon from "/public/images/soon.webp";
+import design from "/public/images/designAgency.jpg";
+import eCommerce from "/public/images/e-commerce.jpg";
+import exam from "/public/images/exam.jpg";
 import Project from "./Project";
 // import Instagram from "../../images/instagram-delete-later.webp"
 
@@ -131,11 +131,11 @@ const Main = () => {
   // ====================================================
   function pressed(e) {
     //  This function to (put class active) and (re-render) when the user press on taps
-    let allTaps = document.querySelectorAll(".main .left-section div");
+    let allTaps = document.querySelectorAll("#main .left-section div");
     allTaps.forEach((div) => {
-      div.className = "";
+      div.className = "btn-ui";
     });
-    e.target.className = "active";
+    e.target.className = "btn-ui active";
     setCategory(e.target.innerHTML);
   }
   // ====================================================
@@ -149,28 +149,36 @@ const Main = () => {
       });
     }
   };
+
   return (
-    <main className="main " id="projects">
-      <h2 className="title">Projects</h2>
-      <div className="container d-flex">
-        <section className="left-section d-flex">
-          <div onClick={(e) => pressed(e)} className="active">
-            All
-          </div>
-          {allTaps().map((tap, index) => (
-            <div key={index + 1} onClick={(e) => pressed(e)}>
-              {tap}
+    <section id="projects">
+      <div className="container">
+        <h2 className="title">Projects</h2>
+        <div className="section-body d-flex">
+          <div className="left-section d-flex">
+            <div onClick={(e) => pressed(e)} className="btn-ui active">
+              All
             </div>
-          ))}
-        </section>
-        <section className="right-section">
-          {dataRevealed().map((project, index) => (
-            <Project key={index + 1} project={project} />
-          ))}
-        </section>
+            {allTaps().map((tap, index) => (
+              <div
+                key={index + 1}
+                className="btn-ui"
+                onClick={(e) => pressed(e)}
+              >
+                {tap}
+              </div>
+            ))}
+          </div>
+          <div className="right-section">
+            {dataRevealed().map((project, index) => (
+              <Project key={index + 1} project={project} />
+            ))}
+          </div>
+        </div>
+
         {/* <RightSection dataRevealed={dataRevealed()} /> */}
       </div>
-    </main>
+    </section>
   );
 };
 
