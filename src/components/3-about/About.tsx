@@ -26,7 +26,6 @@ function About() {
     "icon-postman",
   ];
   const distance_btwn_logos = 360 / Tech_Classes_Icons.length;
-
   return (
     <section className=" about">
       <div className="container">

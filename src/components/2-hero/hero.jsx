@@ -6,16 +6,13 @@ import me from "/public/images/H image.jpg";
 import Lottie from "lottie-react";
 import programmingAnimation from "./../../animation/coding.json";
 import MyIcons from "./MyIcons";
-import { fetchingData } from "../../utilis/fetch";
+import { fetchingData } from "/src/utilis/fetch.ts";
 
 const Hero = () => {
   const [allSocial, setAllSocial] = useState();
   useEffect(() => {
     fetchingData("/public/project-details/social.json", setAllSocial);
   }, []);
-  console.log(allSocial);
-  console.log(me);
-  console.log("/public/images/H image.jpg");
 
   return (
     <div className="hero ">

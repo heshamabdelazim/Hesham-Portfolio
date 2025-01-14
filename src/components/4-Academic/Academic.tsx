@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import "./Academic.scss";
-import { fetchingData } from "../../utilis/fetch";
+import { fetchingData } from "/src/utilis/fetch.ts";
 
 function Academic() {
   const [data, setData] = useState(null);
   const [chosenTap, setChosenTap] = useState();
   const [openFigure,setOpenFigure] = useState();
   useEffect(() => {
-    fetchingData("../../../public/project-details/my-Details.json", setData);
+    fetchingData("/public/project-details/my-Details.json", setData);
   }, []);
 
   useEffect(() => {
