@@ -131,7 +131,7 @@ const Main = () => {
   // ====================================================
   function pressed(e) {
     //  This function to (put class active) and (re-render) when the user press on taps
-    let allTaps = document.querySelectorAll("#main .left-section div");
+    let allTaps = document.querySelectorAll("#projects .left-section div");
     allTaps.forEach((div) => {
       div.className = "btn-ui";
     });
