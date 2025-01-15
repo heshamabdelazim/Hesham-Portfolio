@@ -7,12 +7,13 @@ import Lottie from "lottie-react";
 import programmingAnimation from "./../../animation/coding.json";
 import MyIcons from "./MyIcons";
 import { fetchingData } from "/src/utilis/fetch.ts";
+import { allSocial } from "./data";
 
 const Hero = () => {
-  const [allSocial, setAllSocial] = useState();
-  useEffect(() => {
-    fetchingData("/public/project-details/social.json", setAllSocial);
-  }, []);
+  // const [allSocial, setAllSocial] = useState();
+  // useEffect(() => {
+  //   fetchingData("/public/project-details/social.json", setAllSocial);
+  // }, []);
 
   return (
     <div className="hero ">
