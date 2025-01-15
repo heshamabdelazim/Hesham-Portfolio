@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./hero.css";
 
-import me from "/public/images/H image.jpg";
+import me from "/images/H image.jpg";
 // lottie-react for animation
 import Lottie from "lottie-react";
 import programmingAnimation from "./../../animation/coding.json";

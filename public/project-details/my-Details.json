@@ -3,7 +3,7 @@
     "id": 1,
     "isActive": false,
     "org": "University",
-    "logo": "/public/images/Damanhour-Logo.png",
+    "logo": "/images/Damanhour-Logo.png",
     "course": [
       {
         "title": "Damanhour University - Physics Department",
@@ -25,15 +25,15 @@
     "images": [
       {
         "title": "Damanhour University",
-        "imgPath": "/public/images/Damanhour-University.jpg"
+        "imgPath": "/images/Damanhour-University.jpg"
       },
       {
         "title": "Graduation Certificate",
-        "imgPath": "/public/images/graduation.jpg"
+        "imgPath": "/images/graduation.jpg"
       },
       {
         "title": "Matlab-work",
-        "imgPath": "/public/images/university-pro.PNG"
+        "imgPath": "/images/university-pro.PNG"
       }
     ]
   },
@@ -41,7 +41,7 @@
     "id": 2,
     "isActive": false,
     "org": "Self-Study",
-    "logo": "/public/images/setf-logo.png",
+    "logo": "/images/setf-logo.png",
     "course": [
       {
         "title": "HTML, CSS, SASS, JS",
@@ -55,11 +55,11 @@
     "images": [
       {
         "title": "ElZero Web School",
-        "imgPath": "/public/images/Elzero-youtube.jpg"
+        "imgPath": "/images/Elzero-youtube.jpg"
       },
       {
         "title": "Code Zone",
-        "imgPath": "/public/images/code-zone.jpg"
+        "imgPath": "/images/code-zone.jpg"
       }
     ]
   },
@@ -67,7 +67,7 @@
     "id": 3,
     "org": "Udemy.com",
     "isActive": false,
-    "logo": "/public/images/Udemy-logo.png",
+    "logo": "/images/Udemy-logo.png",
     "course": [
       {
         "title": "The Ultimate React Course 2024: React, Next.js, Redux & More",
@@ -77,7 +77,7 @@
     "images": [
       {
         "title": "ElZero Web School",
-        "imgPath": "/public/images/react-jonas.jpg"
+        "imgPath": "/images/react-jonas.jpg"
       }
     ]
   },
@@ -85,7 +85,7 @@
     "id": 4,
     "isActive": false,
     "org": "Ministry of Technologies",
-    "logo": "/public/images/ministry.png",
+    "logo": "/images/ministry.png",
     "course": [
       {
         "title": "SoftWare Testing Scholarship",
@@ -99,7 +99,7 @@
     "images": [
       {
         "title": "Ministry of Communication and Information technologies",
-        "imgPath": "/public/images/DBMS.jpg"
+        "imgPath": "/images/DBMS.jpg"
       }
     ]
   }

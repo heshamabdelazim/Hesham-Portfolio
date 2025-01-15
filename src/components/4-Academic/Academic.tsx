@@ -19,9 +19,6 @@ function Academic() {
   }, [data])
   
 
-  function figureClicked() {
-  
-}
 
   return (
     <section id="study">
