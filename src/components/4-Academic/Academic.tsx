@@ -1,22 +1,24 @@
 import React, { useEffect, useState } from "react";
 import "./Academic.scss";
 import { fetchingData } from "/src/utilis/fetch.ts";
+import { data } from "./data";
 
 function Academic() {
-  const [data, setData] = useState(null);
-  const [chosenTap, setChosenTap] = useState();
-  const [openFigure,setOpenFigure] = useState();
-  useEffect(() => {
-    fetchingData("/public/project-details/my-Details.json", setData);
-  }, []);
+  // const [data, setData] = useState(null);
+  const [chosenTap, setChosenTap] = useState(data[0]);
+  const [openFigure, setOpenFigure] = useState();
+  
+  // useEffect(() => {
+  //   fetchingData("/public/project-details/my-Details.json", setData);
+  // }, []);
 
-  useEffect(() => {
-    if (!chosenTap && data) {
-      data[0].isActive = true;
-      setChosenTap(data[0])
-    }
-    // why this? to set default value of the (choesnTap) variable
-  }, [data])
+  // useEffect(() => {
+  //   if (!chosenTap && data) {
+  //     data[0].isActive = true;
+  //     setChosenTap(data[0])
+  //   }
+  //   // why this? to set default value of the (choesnTap) variable
+  // }, [data])
   
 
 
