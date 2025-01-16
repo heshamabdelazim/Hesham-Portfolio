@@ -16,7 +16,12 @@ HTML{
   --secondary: rgb(24 24 27); /*the container background*/
   --bg-header:rgb(39, 39, 42);
   --logo-border: #5eff7d;
-  --btn-border-radius:6px
+  --tap-border-radius:6px;
+  --line-height:1.4rem;
+
+  --font-size-title: clamp(2rem, 9vw, 6rem);
+  --font-size-tap:clamp(1rem,2vw,1.5rem); /*responsive*/
+  --padding-tap: clamp(0.3rem, 1.7vw, 0.8rem); /*responsive*/
 
 }
 body{
@@ -30,10 +35,11 @@ input:disabled{
 .title{
   text-align: center;
   letter-spacing: 20px;
-  font-size: 6rem;
   text-shadow: 0px 3px 3px var(--blue);
   color: var(--primary);
   margin-bottom: 2.2rem;
+  text-transform: uppercase;
+  font-size: var(--font-size-title);
 }
 /* .title:hover{
   animation: titleAnim 2s infinite alternate;
@@ -80,7 +86,7 @@ section{
 
 /* btn-ui */
 .btn-ui{
-  padding: 1rem;
+  padding: var(--padding-tap);
   background-color: var(--secondary);
   min-width:11.8rem;
   display: flex;
@@ -88,7 +94,7 @@ section{
   align-items: center;
   font-weight: bold;
   color: var(--subtitle);
-  font-size: 1.4rem;
+  font-size: var(--font-size-tap);
   text-transform: capitalize;
   cursor: pointer;
   opacity: 0.7;
@@ -106,6 +112,7 @@ section{
   letter-spacing: 2px;
   opacity: 1;
 }
+
 /* btn finish */
 
 .divider{
@@ -214,13 +221,18 @@ a{
     padding: 0.8rem;
     bottom: 66px;
   }
-  .title{
-    font-size: 3.5rem;
+  .btn-ui{
+    min-width: unset;
+    text-align: center !important;
+    display: block !important;
+  }
+  .btn-ui.active, .btn-ui:hover{
+    letter-spacing: unset;
   }
 }
-@media (max-width:400px){
+/* @media (max-width:400px){
   .title{
     font-size: 2.8rem;
   }
 
-}
+} */

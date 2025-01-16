@@ -14,8 +14,12 @@ export function App() {
     window.addEventListener("scroll", () => {
       window.scrollY > 350 ? setArrowTop(true) : setArrowTop(false);
     });
-    console.log("rendered");
+    console.log(allSections());
   });
+  function allSections() {
+    const allSections = document.querySelectorAll("section");
+    return allSections;
+  }
   return (
     <>
       <section className=" openning ">

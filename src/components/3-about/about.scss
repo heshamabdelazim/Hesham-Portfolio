@@ -26,9 +26,10 @@ $rotateX : -51%;
 }
 section.about{
     overflow: hidden;
-    flex-direction: column;
-    align-items: center ;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 5.6rem;
     .container{
         perspective:1000px; //for 3d
@@ -90,6 +91,7 @@ section.about{
             background-color: #8282823b;
             padding: 1rem;
             border-radius: 20px;
+            line-height: var(--line-height);
         }
         .slider{
             display: flex;

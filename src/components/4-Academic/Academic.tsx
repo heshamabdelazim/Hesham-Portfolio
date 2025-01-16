@@ -20,22 +20,24 @@ function Academic() {
   //   // why this? to set default value of the (choesnTap) variable
   // }, [data])
   
-
+  function tapClicked(obj) {
+    setChosenTap((old) => {
+      old.isActive = false;
+      obj.isActive = true;
+      return obj
+    })
+}
 
   return (
-    <section id="study">
+    <section id="academic">
       <div className="container">
         <h2 className="title">Academic Dev</h2>
         <div className="section-body d-flex">
           {/* taps */}
           <ul className="taps">
             {data?.map((obj) => (
-              <li key={obj.id} className={ `btn-ui tap ${obj.isActive? "active":" "} ` } onClick={() => setChosenTap((old) => {
-                old.isActive = false;
-                obj.isActive = true;
-                return obj
-              })}>
-                <img src={obj.logo} />
+              <li key={obj.id} className={ `btn-ui tap ${obj.isActive? "active":" "} ` } onClick={() =>tapClicked(obj) }>
+                <img src={obj.logo} className="hide" />
                 <h3>{obj.org}</h3>
               </li>
             ))}
@@ -44,12 +46,12 @@ function Academic() {
           <div className="tap-details">
             {chosenTap?.course.map((obj,id) => (
               <div key={id}>
-                <h3>{obj.title}</h3>
+                <h4>{obj.title}</h4>
                 <p>{obj.desc}</p>
               </div>
             ))}
             <div className="imgs-container">
-              <h3>Images</h3>
+              <h4>Images</h4>
               <div className="imgs-holder">
                 {chosenTap?.images.map((obj, id) => (
                   <figure key={id} onClick={()=>setOpenFigure(obj)}>

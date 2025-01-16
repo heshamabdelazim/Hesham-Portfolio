@@ -1,7 +1,7 @@
 export const data = [
   {
     id: 1,
-    isActive: false,
+    isActive: true,
     org: "University",
     logo: "/images/Damanhour-Logo.png",
     course: [
@@ -10,7 +10,7 @@ export const data = [
         desc: "In my 4 years and half, I studied theories of physics, Statics, Dynamics and Electronics.",
       },
       {
-        title: "Subjects had been Studied in Physics Department",
+        title: "Physics Department Subjects",
         desc: "All of Mathmatics branches. like [Statistics and Probability, Differential Equation, Mathematical Physics, Computational Mathematics, Matrix] ",
       },
       {
@@ -65,7 +65,7 @@ export const data = [
   },
   {
     id: 3,
-    org: "Udemy.com",
+    org: "Udemy",
     isActive: false,
     logo: "/images/Udemy-logo.png",
     course: [
@@ -76,7 +76,7 @@ export const data = [
     ],
     images: [
       {
-        title: "ElZero Web School",
+        title: "React - Jonas",
         imgPath: "/images/react-jonas.jpg",
       },
     ],
@@ -84,7 +84,7 @@ export const data = [
   {
     id: 4,
     isActive: false,
-    org: "Ministry of Technologies",
+    org: "Ministry",
     logo: "/images/ministry.png",
     course: [
       {

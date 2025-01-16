@@ -37,7 +37,7 @@ const Contact = () => {
   // To get react-code I searched (npm i lottie-react) (https://lottiereact.com/)
 
   return (
-    <div className="contact" id="contact">
+    <section className="contact" id="contact">
       <div className="tap d-flex">
         <div className="social">
           <div className="d-flex whatsapp">
@@ -56,7 +56,7 @@ const Contact = () => {
       <div className="container ">
         <h2>Contact Us.</h2>
         <div className="content d-flex">
-          <section className="left-section">
+          <div className="left-section">
             {/* <div className="mail " /> */}
             <form onSubmit={handleSubmit} className="d-flex">
               <div className="name">
@@ -117,7 +117,7 @@ const Contact = () => {
             {state.succeeded && (
               <span className="response">Feedback, Sent successfully.✅ </span>
             )}
-          </section>
+          </div>
           {/* <section className="right-section hide border">{view}</section> */}
           <Lottie
             animationData={sending}
@@ -131,7 +131,7 @@ const Contact = () => {
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

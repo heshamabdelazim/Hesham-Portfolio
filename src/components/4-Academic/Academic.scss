@@ -1,19 +1,22 @@
-section#study{
+@import "../3-about/about.scss";
+section#academic{
     .section-body{
         gap: 1.8rem;
         align-items: flex-start;
         ul.taps{
             display: flex;
-            flex-basis: 25%;
+            // flex-basis: 25%;
             flex-direction: column;
             gap: 1.4rem;
-            padding: 0.7rem;
-            border-radius: var(--btn-border-radius);
+            // padding: 0.7rem;
             .tap{
-                display: flex;
-                gap: 0.5rem;
-                justify-content: flex-start;
-                text-align: start;
+                display: flex
+                ;
+                    gap: 0.5rem;
+                    justify-content: flex-start;
+                    text-align: start;
+                    font-size: clamp(1rem, 1.5vw, 1.6rem);
+                    padding: var(--padding-tap);
                 &.active img{background-color: white;}
                 img{
                     width: 36px;
@@ -29,15 +32,19 @@ section#study{
             }
         }
         .tap-details{
+            flex-basis: 90% !important;
             display: flex;
+            line-height: var(--line-height);
             flex: 1;
             flex-direction: column;
             gap: 2.8rem;
             letter-spacing: 0.02rem;
-            h3{
-                color: orange;
+            color: var(--text);
+            h4{
+                color: var(--orange);
                 position: relative;
-                margin-bottom: 1rem;
+                margin-bottom: 0.8rem;
+                font-size: clamp(1rem, 2vw, 1.3rem);
             &::before{
                 content: "";
                 position: absolute;
@@ -51,7 +58,8 @@ section#study{
             }
         }
                 .imgs-holder{
-                    display: flex;
+                    display: grid;
+                    grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
                     gap: 1.2rem;
                     img{
                         width: 250px;
@@ -62,6 +70,11 @@ section#study{
                 figure{
                     cursor: pointer;
                     transition: 0.6s;
+                    // display: flex;
+                    // justify-content: center;
+                    // align-items: center;
+                    @include flexCenter;
+                    flex-direction: column;
                     &:hover{
                         scale: 1.08;
                     }
@@ -118,3 +131,20 @@ section#study{
             transform:  scale(1);
         }
     }
+
+@media($small-below){
+    #academic{
+        .section-body{
+            gap: 0.8rem !important;
+        }
+        .tap-details{ 
+            img{
+                width: 180px !important;
+                height: 150px !important;
+            }
+            h4::before{
+            display: none;
+            }
+        }
+    } 
+}
