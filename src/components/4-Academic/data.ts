@@ -1,4 +1,14 @@
-export const data = [
+interface myDataStructure{
+    id: number,
+  isActive: boolean,
+  org: String,
+  logo: String,
+  course: { title: String, desc: String }[],
+  images: {title:String, imgPath:String}[]
+
+  }
+
+export const data : myDataStructure[] = [
   {
     id: 1,
     isActive: true,
@@ -45,12 +55,20 @@ export const data = [
     course: [
       {
         title: "HTML, CSS, SASS, JS",
-        desc: "with El-zero",
+        desc: "on Elzero Web School online.",
       },
       {
         title: "React.js",
-        desc: "with Ahmed Nasser",
+        desc: "on Code-Zone online.",
       },
+      {
+        title: "How to use Jira Course",
+        desc: "Learnt Agile and tracking tasks and time in a team."
+      },
+      {
+        title: "Postman Course",
+        desc: "API requests tests and practicing automation."
+      }
     ],
     images: [
       {
