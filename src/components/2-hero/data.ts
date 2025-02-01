@@ -1,4 +1,11 @@
-export const allSocial = [
+interface socialStructure{
+  id: number,
+  icon: String,
+  href: String,
+  title:String
+}
+
+export const allSocial : socialStructure[] = [
   {
     id: 1,
     icon: "icon-github",

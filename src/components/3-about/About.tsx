@@ -27,7 +27,7 @@ function About() {
   ];
   const distance_btwn_logos = 360 / Tech_Classes_Icons.length;
   return (
-    <section className=" about">
+    <section id="about">
       <div className="container">
       <h2 className="title">About me</h2>
       {/* First section is => image with all technologies */}
@@ -63,7 +63,7 @@ function About() {
             <span
               className={iconStyle}
               // style={{ transform: `rotate(${-id * distance_btwn_logos}deg)` }}
-            />
+              />
           </div>
         ))}
         </div>

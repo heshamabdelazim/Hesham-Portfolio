@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./hero.css";
 
-import me from "/images/H image.jpg";
+import me from "/images/formal-removebg-preview.png";
 // lottie-react for animation
 import Lottie from "lottie-react";
 import programmingAnimation from "./../../animation/coding.json";
@@ -16,7 +16,7 @@ const Hero = () => {
   // }, []);
 
   return (
-    <div className="hero ">
+    <div className="hero">
       <div className="container d-flex ">
         <div className="details d-flex ">
           <div className="image">

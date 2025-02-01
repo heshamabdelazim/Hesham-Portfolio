@@ -24,7 +24,7 @@ $rotateX : -51%;
     left: 50%;
     transform: translate(-50%,-50%);
 }
-section.about{
+section#about{
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -147,14 +147,14 @@ section.about{
 }
 
 @media ($large-below){
-    .about .section-body{
+    #about .section-body{
         $rotatex:-38% !important;
         flex-direction: column !important;
     }
 }
 @media ($medium-below){ //992
     
-    .about .section-body{
+    #about .section-body{
         gap: 2.2rem !important;
     }
 

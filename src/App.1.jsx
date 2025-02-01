@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Header from "./components/1-header/header";
+import Header from "./components/1-header/Header";
 import Hero from "./components/2-hero/hero";
 import About from "./components/3-about/About";
 import Academic from "./components/4-Academic/Academic";
@@ -9,22 +9,25 @@ import Footer from "./components/7-footer/Footer";
 
 export function App() {
   let [arrowTop, setArrowTop] = useState(false);
+  let [sectionsIds, setSectionsIds] = useState([]);
   useEffect(() => {
     // This to show arrow
     window.addEventListener("scroll", () => {
       window.scrollY > 350 ? setArrowTop(true) : setArrowTop(false);
     });
-    console.log(allSections());
-  });
-  function allSections() {
-    const allSections = document.querySelectorAll("section");
-    return allSections;
-  }
+    const sectionDOMs = Array.from(
+      document.querySelectorAll("#root > section")
+    );
+    const IDsArray = sectionDOMs.map((dom) => dom.id);
+    setSectionsIds(IDsArray);
+  }, []);
+  console.log(sectionsIds);
+
   return (
     <>
-      <section className=" openning ">
+      <section id="openning">
         {/* This element that has background-image */}
-        <Header />
+        <Header IDs={sectionsIds} />
         <Hero />
       </section>
       <div className="divider" />

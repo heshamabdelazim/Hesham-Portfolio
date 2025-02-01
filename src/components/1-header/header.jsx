@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react";
-import Nav from "./OOP-nav";
+import { useEffect, useRef, useState } from "react";
+import Nav from "./Nav";
 import "./header.css";
-const Header = () => {
+const Header = ({ IDs }) => {
   let [show, setShow] = useState(false);
+  let navBar = useRef();
   // let [mood, setMood] = useState("");
   const lightMood = { mood: "light", icon: "icon-sun" };
   const darkMood = { mood: "dark", icon: "icon-moon1" };
@@ -54,7 +55,7 @@ const Header = () => {
 
         <nav>
           <ul className="d-flex">
-            <Nav />
+            <Nav IDs={IDs} />
           </ul>
         </nav>
         <span
@@ -70,7 +71,7 @@ const Header = () => {
         {show && (
           <div className=" fixed">
             <ul className="model ">
-              <Nav />
+              <Nav IDs={IDs} setShow={setShow} />
               <span onClick={() => setShow(false)}>X</span>
             </ul>
           </div>
