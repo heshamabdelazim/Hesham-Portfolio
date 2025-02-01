@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./about.scss";
 
-import myImage from "../../../public/images/formal-removebg-preview.png";
+// import myImage from "../../../public/images/formal-removebg-preview.png";
+import myImage from "/public/images/formal-removebg-preview.png";
 
 function About() {
   interface spanStyle{
@@ -25,7 +26,7 @@ function About() {
     "icon-next-dot-js",
     "icon-postman",
   ];
-  const distance_btwn_logos = 360 / Tech_Classes_Icons.length;
+  const distance_btwn_logos:number = 360 / Tech_Classes_Icons.length;
   return (
     <section id="about">
       <div className="container">

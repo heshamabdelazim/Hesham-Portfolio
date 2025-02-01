@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import Header from "./components/1-header/Header";
-import Hero from "./components/2-hero/hero";
-import About from "./components/3-about/About";
-import Academic from "./components/4-Academic/Academic";
-import Main from "./components/5-main/main";
-import Contact from "./components/6-contact/Contact";
-import Footer from "./components/7-footer/Footer";
+import Header from "/src/components/1-header/Header";
+import Hero from "/src/components/2-hero/hero";
+import About from "/src/components/3-about/About";
+import Academic from "/src/components/4-Academic/Academic";
+import Main from "/src/components/5-main/main";
+import Contact from "/src/components/6-contact/Contact";
+import Footer from "/src/components/7-footer/Footer";
 
 export function App() {
   let [arrowTop, setArrowTop] = useState(false);
