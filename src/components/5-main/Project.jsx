@@ -11,7 +11,7 @@ function Project({ project }) {
         <p>{project.para}</p>
       </article>
       <div className="footer ">
-        {project.demoLink ? (
+        {project.repo ? (
           <div className="links">
             <a href={project.repo} target="_blank">
               <span className="icon-github" />
@@ -25,7 +25,7 @@ function Project({ project }) {
         )}
       </div>
       {/* THe following code is showing icon, So the project is still working the clock will be else the object icon */}
-      <i className={project.demoLink ? project.icon : "icon-stopwatch"} />
+      <i className={project.repo ? project.icon : "icon-stopwatch"} />
     </div>
   );
 }

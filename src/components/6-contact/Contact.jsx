@@ -54,7 +54,7 @@ const Contact = () => {
         </div>
       </div>
       <div className="container ">
-        <h2>Contact Us.</h2>
+        <h2 className="title">Contact Us</h2>
         <div className="content d-flex">
           <div className="left-section">
             {/* <div className="mail " /> */}

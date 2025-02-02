@@ -54,20 +54,24 @@ export const data : myDataStructure[] = [
     logo: "/images/setf-logo.png",
     course: [
       {
-        title: "HTML, CSS, SASS, JS",
-        desc: "on Elzero Web School online.",
+        title: "Fundamentals of Web",
+        desc: "On Elzero Web School(YouTube), I've learnt HTML, CSS, SASS and JS. I also made 4 templates of web using HTML and CSS with respect to SEO and Semantic Elements, ",
       },
       {
-        title: "React.js",
-        desc: "on Code-Zone online.",
+        title: "Frame work of JavaScript (React.js)",
+        desc: "on Code-Zone(YouTube), I've learnt React best practices and its projects.",
       },
       {
         title: "How to use Jira Course",
-        desc: "Learnt Agile and tracking tasks and time in a team."
+        desc: "Learnt tracking tasks and time in companies using Jira(Scrum and Kanban) inside a team with Agile methodology."
       },
       {
         title: "Postman Course",
-        desc: "API requests tests and practicing automation."
+        desc: "Testing the API response by applying some assertions and scripting on the response body, Validating JSON Schema, Headers, Authentication, expected response data type and integrating the script into CI/CD server."
+      },
+      {
+        title: "Problem Solving",
+        desc:"Solving Questions on Leetcode.com, Critical thinking, Reducing time complixity, increasing performance."
       }
     ],
     images: [
@@ -79,6 +83,18 @@ export const data : myDataStructure[] = [
         title: "Code Zone",
         imgPath: "/images/code-zone.jpg",
       },
+      {
+        title: "Postman",
+        imgPath:"/images/postman-interface.jpg"
+      },
+      {
+        title: "API Test Automation Certificate",
+        imgPath:"/images/API-Test-Automation.jpg"
+      },
+      {
+        title: "Leetcode.com",
+        imgPath:"/images/leetcode.jpg"
+      }
     ],
   },
   {
@@ -116,9 +132,13 @@ export const data : myDataStructure[] = [
     ],
     images: [
       {
-        title: "Mahara tech",
+        title: "Mahara Tech Platform",
         imgPath: "/images/DBMS.jpg",
       },
+      {
+        title: "Database Certificate",
+        imgPath:"/images/Database.jpg"
+      }
     ],
   },
 ];

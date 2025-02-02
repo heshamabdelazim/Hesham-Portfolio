@@ -6,8 +6,6 @@ interface navProps{
   isSmallScreens?:boolean
 }
 const Nav = ({ IDs, setShow,isSmallScreens=false }:navProps)  => {
-  console.log(IDs);
-  console.log(isSmallScreens);
   
   return (
     <nav className={isSmallScreens?"popup-nav":"hide d-flex"}>
@@ -18,7 +16,9 @@ const Nav = ({ IDs, setShow,isSmallScreens=false }:navProps)  => {
         </li>
       ))}
       </ul>
-      <span onClick={() => setShow(false)}>X</span>
+      {isSmallScreens&&
+        <span className="closeX" onClick={() => setShow(false)}>X</span>
+      }
     </nav>
   );
 };

@@ -132,7 +132,19 @@ a{
   transition: 0.3s;
 }
 
-
+.closeX{
+  position: absolute;
+  right: 7%;
+  transition: 0.3s;
+  cursor: pointer;
+  padding: 5px;
+  opacity: 0.9;
+  top: 7%;
+  background: #ff9797;
+  border-radius: 50%;
+  padding: 1rem 1.2rem;
+  z-index: 1;
+}
 /* =============================
         Container + opening
 ================================*/

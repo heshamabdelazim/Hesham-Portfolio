@@ -66,7 +66,7 @@ function Academic() {
         {
           openFigure && (
             <div className="showFig">
-              <span onClick={()=>setOpenFigure(null)}>X</span>
+              <span className="closeX" onClick={()=>setOpenFigure(null)}>X</span>
               <img src={openFigure.imgPath} alt={openFigure.title} />
             </div>
           )

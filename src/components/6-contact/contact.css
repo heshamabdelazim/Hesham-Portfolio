@@ -23,7 +23,7 @@
 .contact, .contact .container {
     overflow: hidden;
 }
-.contact .container > h2, .contact h3{
+.contact .container > h3{
     text-align: center;
     color: var(--text);
 }
