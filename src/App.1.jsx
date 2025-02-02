@@ -6,28 +6,44 @@ import Academic from "/src/components/4-Academic/Academic";
 import Main from "/src/components/5-main/main";
 import Contact from "/src/components/6-contact/Contact";
 import Footer from "/src/components/7-footer/Footer";
+import { lightMood, putting } from "./utilis/light-dark";
 
 export function App() {
   let [arrowTop, setArrowTop] = useState(false);
   let [sectionsIds, setSectionsIds] = useState([]);
+  let [chosenMood, setChosenMood] = useState(
+    JSON.parse(localStorage.getItem("mood")) || lightMood
+  );
+  console.log(chosenMood);
   useEffect(() => {
     // This to show arrow
     window.addEventListener("scroll", () => {
       window.scrollY > 350 ? setArrowTop(true) : setArrowTop(false);
     });
+    //nav IDs
     const sectionDOMs = Array.from(
       document.querySelectorAll("#root > section")
     );
     const IDsArray = sectionDOMs.map((dom) => dom.id);
     setSectionsIds(IDsArray);
+    //localStorage mood
+    if (!window.localStorage.getItem("mood")) {
+      localStorage.setItem("mood", JSON.stringify(lightMood));
+      putting(chosenMood);
+    } else {
+      putting(chosenMood);
+    }
   }, []);
-  console.log(sectionsIds);
 
   return (
     <>
       <section id="openning">
         {/* This element that has background-image */}
-        <Header IDs={sectionsIds} />
+        <Header
+          IDs={sectionsIds}
+          chosenMood={chosenMood}
+          setChosenMood={setChosenMood}
+        />
         <Hero />
       </section>
       <div className="divider" />

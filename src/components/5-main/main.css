@@ -34,7 +34,7 @@ section#projects .left-section{
     gap: 2rem;
     align-items: stretch;
     position: sticky;
-    top: 30px;
+    top: 15%;
 }
 
 section#projects .left-section div:active{

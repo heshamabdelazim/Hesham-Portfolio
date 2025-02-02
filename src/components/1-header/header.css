@@ -13,8 +13,14 @@ C. Pop up menu
     Header design
 ========================*/
 header{
-    position: relative;
+    padding: 1.8rem 3rem;
+    justify-content: space-between;
+    position: fixed;
     z-index: 3;
+    width: 100%;
+    top: 0;
+    background: #dbdbdb00;
+    backdrop-filter: blur(6px);
 }
 header ul.d-flex{
     gap: 16px;
@@ -60,8 +66,7 @@ header .menu, header .mood{
 header .menu{
     visibility: hidden;
 }
-header .mood{
-}
+
 header .menu:hover,
 header .mood:hover{
     opacity: 1;
@@ -73,17 +78,18 @@ header .menu:active, header .mood:active{
 }
     
 
-@media (max-width:768px){
+@media (max-width:992px){
     header .menu{
         visibility: visible;
     }
-    header nav{display: none;}
 }
 /* end icons */
 /*======================
     Pop up menu
 ========================*/
-header .fixed {
+
+  header .popup-nav{
+    border-radius: unset;
     position: fixed;
     /* top: 0;
     bottom: 0;
@@ -93,10 +99,14 @@ header .fixed {
     background-color:rgb(40 40 48 / 75%);
     z-index: 99;
     backdrop-filter: blur(2px);
+    height: 100vh;
+    width: 100vw;
+    animation: showing 0.5s ;
+
   }
-header .fixed ul.model{
+header .popup-nav ul{
     width: 80%;
-    margin: 20px auto;
+    margin: 5.5rem auto;
     display: flex;
     flex-direction: column;
     /* gap: 26px; */
@@ -111,27 +121,20 @@ header .fixed ul.model{
     animation: showing 0.5s;
     position: relative;
 }
-header .fixed ul.model li{
-    border-bottom: 1px solid var(--border);
-    padding: 0.2rem 0;
-}
-header .fixed ul.model li:first-child{
-    padding-top: 0;
-}
-header .fixed ul.model li:last-of-type{
-    padding-bottom: 0;
-    border-bottom: none;
-}
 
-header .fixed ul.model span{
+header .popup-nav span{
     position: absolute;
-    right: 5%;
+    right: 7%;
     transition: 0.3s;
     cursor: pointer;
     padding: 5px;
     opacity: 0.9;
+    top: 7%;
+    background: #ff9797;
+    border-radius: 50%;
+    padding: 1rem 1.2rem;
 }
-header .fixed ul.model span:hover{
+header .popup-nav span:hover{
     color: #ff6363;
     scale: 1.1;
     opacity: 1;
