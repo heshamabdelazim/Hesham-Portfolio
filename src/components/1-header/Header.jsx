@@ -18,7 +18,7 @@ const Header = ({ IDs, chosenMood, setChosenMood }) => {
       <div className="d-flex">
         <a
           href="/public/images/Hesham_Abdelazim_cv.pdf"
-          download="Hesham_Abdelazim_cv"
+          download="Hesham_Abdelazim_cv.pdf"
           className="download"
         >
           Download CV
