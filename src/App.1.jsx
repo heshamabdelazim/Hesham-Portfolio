@@ -11,12 +11,15 @@ import { lightMood, putting } from "./utilis/light-dark";
 export function App() {
   let [arrowTop, setArrowTop] = useState(false);
   let [sectionsIds, setSectionsIds] = useState([]);
-  let [chosenMood, setChosenMood] = useState(
-    JSON.parse(localStorage.getItem("mood")) || lightMood
-  );
-  console.log(chosenMood);
+  let [chosenMood, setChosenMood] = useState((old) => {
+    const chosen = JSON.parse(localStorage.getItem("mood")) || lightMood;
+    !localStorage.getItem("mood") &&
+      localStorage.setItem("mood", JSON.stringify(chosen));
+    putting(chosen);
+    return chosen;
+  });
   useEffect(() => {
-    // This to show arrow
+    // Side effect to show arrow
     window.addEventListener("scroll", () => {
       window.scrollY > 350 ? setArrowTop(true) : setArrowTop(false);
     });
@@ -26,13 +29,6 @@ export function App() {
     );
     const IDsArray = sectionDOMs.map((dom) => dom.id);
     setSectionsIds(IDsArray);
-    //localStorage mood
-    if (!window.localStorage.getItem("mood")) {
-      localStorage.setItem("mood", JSON.stringify(lightMood));
-      putting(chosenMood);
-    } else {
-      putting(chosenMood);
-    }
   }, []);
 
   return (

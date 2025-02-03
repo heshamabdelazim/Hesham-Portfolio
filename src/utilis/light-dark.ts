@@ -2,12 +2,13 @@
 export const lightMood = { mood: "light", icon: "icon-sun" };
 const darkMood = { mood: "dark", icon: "icon-moon1" };
 
+interface mood{
+  mood: String,
+  icon:String
+}
 // =============================
-export function putting(chosenMood): void {
+export function putting(chosenMood : mood): void {
   document.body.className = chosenMood.mood;  //Put className to the body
-  //====
-  const switcher = document.querySelector("header .mood");
-  switcher.className = chosenMood.icon + " mood";  //Put className to the button
 }
 // =============================
 export function switching(chosenMood:{icon:String,mood:String}, setChosenMood):void {

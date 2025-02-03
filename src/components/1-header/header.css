@@ -13,7 +13,7 @@ C. Pop up menu
     Header design
 ========================*/
 header{
-    padding: 1.8rem 3rem;
+    padding: 1rem 3rem;
     justify-content: space-between;
     position: fixed;
     z-index: 3;
@@ -49,41 +49,51 @@ header button{
     font-size: 1.2rem;
 }
 /*======================
-    icons
+    menu icon
 ========================*/
-
-header .menu, header .mood{
-    transition: 0.3s;
-    cursor: pointer;
-    opacity: 0.7;
-    background-color: var(--bg-header);
-    padding: 3px;
-    border-radius: 50%;
-    border: 0.4px solid yellow;
-    color: white;
-    font-size: 20px;
-}
 header .menu{
     visibility: hidden;
 }
-
-header .menu:hover,
-header .mood:hover{
-    opacity: 1;
-    scale: 1.2;
-
-}
-header .menu:active, header .mood:active{
-    scale: 0.9;
-}
-    
 
 @media (max-width:992px){
     header .menu{
         visibility: visible;
     }
 }
-/* end icons */
+
+/*======================
+    download button
+========================*/
+header nav.hide+div{
+    gap: 1.5rem;
+}
+header .download{
+    padding: 1rem;
+    background-color: var(--blue);
+    border-radius: 6px;
+    font-weight: 600;
+    letter-spacing: 0.07rem;
+    color: white;
+    opacity: 0.8;
+    transition: 0.6s;
+    scale: 0.9;
+}
+header .download:hover{
+    opacity: 1;
+    scale: 1;
+}
+header .download:active{
+    scale: 0.9;
+    transition: 0.2s;
+}
+@media (max-width:767px){
+    header nav.hide+div{
+        gap: 0.7rem;
+    }
+    header .download{
+        padding: 0.7rem;
+    }
+}
 /*======================
     Pop up menu
 ========================*/

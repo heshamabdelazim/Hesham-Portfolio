@@ -114,6 +114,26 @@ section{
 }
 
 /* btn finish */
+ .icon-btn{
+  transition: 0.3s;
+  cursor: pointer;
+  opacity: 0.7;
+  background-color: var(--bg-header);
+  padding: 3px;
+  border-radius: 50%;
+  border: 0.4px solid yellow;
+  color: white;
+  font-size: 20px;
+}
+ .icon-btn{
+  opacity: 1;
+  scale: 1.2;
+}
+
+ .icon-btn:active{
+  scale: 0.9;
+}
+/* icon-btn finish*/
 
 .divider{
   border-top: 2px solid rgba(63, 63, 70, 1);
@@ -145,6 +165,8 @@ a{
   padding: 1rem 1.2rem;
   z-index: 1;
 }
+
+
 /* =============================
         Container + opening
 ================================*/
@@ -160,7 +182,6 @@ a{
 
 #openning{ 
   /* min-height: 100vh; */
-  
   background: var(--sky);
   /* object-fit: contain; */ /*This line only for img tag*/
   background-size: 100% 100%;
