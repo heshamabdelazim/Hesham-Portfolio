@@ -67,7 +67,7 @@ header .menu{
 header nav.hide+div{
     gap: 1.5rem;
 }
-header .download{
+header .download button{
     padding: 1rem;
     background-color: var(--blue);
     border-radius: 6px;
@@ -77,12 +77,14 @@ header .download{
     opacity: 0.8;
     transition: 0.6s;
     scale: 0.9;
+    border: none;
+    cursor: pointer;
 }
-header .download:hover{
+header .download button:hover{
     opacity: 1;
     scale: 1;
 }
-header .download:active{
+header .download button:active{
     scale: 0.9;
     transition: 0.2s;
 }
@@ -90,7 +92,7 @@ header .download:active{
     header nav.hide+div{
         gap: 0.7rem;
     }
-    header .download{
+    header .download button{
         padding: 0.7rem;
     }
 }
