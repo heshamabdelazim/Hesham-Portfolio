@@ -33,15 +33,14 @@ export function App() {
 
   return (
     <>
-      <section id="openning">
-        {/* This element that has background-image */}
-        <Header
-          IDs={sectionsIds}
-          chosenMood={chosenMood}
-          setChosenMood={setChosenMood}
-        />
-        <Hero />
-      </section>
+      {/* This element that has background-image */}
+      <Header
+        IDs={sectionsIds}
+        chosenMood={chosenMood}
+        setChosenMood={setChosenMood}
+      />
+      <Hero />
+
       <div className="divider" />
       <About />
       <div className="divider" />
@@ -56,6 +55,9 @@ export function App() {
         href="#header"
         className="icon-arrow-up2"
         style={{ opacity: arrowTop ? 1 : 0, transition: "0.3s" }}
+        onClick={() => {
+          window.scroll(0, 0);
+        }}
       />
     </>
   );

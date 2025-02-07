@@ -6,8 +6,7 @@ import Project from "./Project";
 // images
 
 import { allProjects } from "./data";
-
-// import Instagram from "../../images/instagram-delete-later.webp"
+import Tap from "./Tap";
 
 const Main = () => {
   let [category, setCategory] = useState("All");
@@ -16,28 +15,18 @@ const Main = () => {
   const allTaps = () => {
     // This function to creates taps that belongs to the projects (left-section)
     const arrayOfTaps = allProjects.map((project) => project.category);
+    arrayOfTaps.unshift("all");
     return Array.from(new Set(arrayOfTaps));
   };
-  // ====================================================
-  function pressed(e) {
-    //  This function to (put class active) and (re-render) when the user press on taps
-    let allTaps = document.querySelectorAll("#projects .left-section div");
-    allTaps.forEach((div) => {
-      div.className = "btn-ui";
-    });
-    e.target.className = "btn-ui active";
-    setCategory(e.target.innerHTML);
-  }
   // ====================================================
   const dataRevealed = () => {
     // This function to filter the projects the user choose from taps (right-section)
     if (category.toLowerCase() === "all") {
       return allProjects;
-    } else {
-      return allProjects.filter((project) => {
-        return category.toLowerCase() === project.category.toLowerCase();
-      });
     }
+    return allProjects.filter(
+      (project) => category.toLowerCase() === project.category.toLowerCase()
+    );
   };
 
   return (
@@ -46,18 +35,17 @@ const Main = () => {
         <h2 className="title">Projects</h2>
         <div className="section-body d-flex">
           <div className="left-section d-flex">
-            <div onClick={(e) => pressed(e)} className="btn-ui active">
-              All
-            </div>
-            {allTaps().map((tap, index) => (
-              <div
-                key={index + 1}
-                className="btn-ui"
-                onClick={(e) => pressed(e)}
-              >
-                {tap}
-              </div>
-            ))}
+            {allTaps().map((tap, index) => {
+              console.log(tap);
+              return (
+                <Tap
+                  key={index}
+                  tap={tap}
+                  category={category}
+                  setCategory={setCategory}
+                />
+              );
+            })}
           </div>
           <div className="right-section">
             {dataRevealed().map((project, index) => (
@@ -65,8 +53,6 @@ const Main = () => {
             ))}
           </div>
         </div>
-
-        {/* <RightSection dataRevealed={dataRevealed()} /> */}
       </div>
     </section>
   );

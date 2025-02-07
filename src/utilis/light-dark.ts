@@ -1,17 +1,16 @@
-
 export const lightMood = { mood: "light", icon: "icon-sun" };
 const darkMood = { mood: "dark", icon: "icon-moon1" };
 
-interface mood{
-  mood: String,
-  icon:String
+interface mood {
+  mood: String;
+  icon: String;
 }
 // =============================
-export function putting(chosenMood : mood): void {
-  document.body.className = chosenMood.mood;  //Put className to the body
+export function putting(chosenMood: mood): void {
+  document.body.className = chosenMood.mood; //Put className to the body
 }
 // =============================
-export function switching(chosenMood:{icon:String,mood:String}, setChosenMood):void {
+export function switching(chosenMood: mood, setChosenMood): void {
   // if the mood is light in LocalStorage, Then put dark else light
   // Using function putting() again
   // ================
@@ -24,6 +23,4 @@ export function switching(chosenMood:{icon:String,mood:String}, setChosenMood):v
     setChosenMood(lightMood);
     putting(lightMood);
   }
-
-
 }

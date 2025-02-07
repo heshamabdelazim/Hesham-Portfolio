@@ -65,6 +65,16 @@ export const allProjects: project[] = [
   },
   {
     id: ++projectId,
+    photo: weather,
+    head: "Weather-App",
+    para: "It gives you the weather of a city with good UI and videos",
+    repo: "https://github.com/heshamabdelazim/weather-app",
+    demoLink: "https://weather-app-hesham.netlify.app",
+    category: "Apps",
+    icon: "icon-react",
+  },
+  {
+    id: ++projectId,
     photo: temp1,
     head: "Template-one",
     para: "First apply on HTML + CSS",
@@ -92,16 +102,6 @@ export const allProjects: project[] = [
     demoLink: "https://template-3-hesham.netlify.app",
     category: "templates",
     icon: "icon-css3",
-  },
-  {
-    id: ++projectId,
-    photo: weather,
-    head: "Weather-App",
-    para: "It gives you the weather of a city with good UI and videos",
-    repo: "https://github.com/heshamabdelazim/weather-app",
-    demoLink: "https://weather-app-hesham.netlify.app",
-    category: "Apps",
-    icon: "icon-react",
   },
   {
     id: ++projectId,
