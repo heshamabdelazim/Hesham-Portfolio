@@ -1,11 +1,10 @@
 $distance : 6px;
 $labelFont : 20px;
 $radius:20px;
-$large-below: "max-width:1320px";
+$large-below: "max-width:1290px";
 $medium-below:"max-width:992px";
 $small-below:"max-width:767px";
 $rotateX : -51%;
-
 
 
 @mixin pesaudoLabel{
@@ -30,7 +29,16 @@ section#about{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
     gap: 5.6rem;
+    &:before{
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index:-1 ;
+        box-shadow: inset 41px 45px 69px 24px var(--bg-header);
+        z-index: 1;
+    }
     .container{
         perspective:1000px; //for 3d
         position: relative;}
@@ -145,17 +153,32 @@ section#about{
     from{transform: translate($rotateX, -50%) rotate3d(2, 1, 0, 49deg) rotate(0);}
     to{transform: translate($rotateX, -50%) rotate3d(2, 1, 0, 49deg) rotate(360deg);}
 }
+@keyframes sliderRotate-medium {
+    from{transform: translate(-35%, -50%) rotate3d(0, 1, 0, 49deg) rotate(0);}
+    to{transform: translate(-35%, -50%) rotate3d(0, 1, 0, 49deg) rotate(360deg);}
+}
 
 @media ($large-below){
-    #about .section-body{
-        $rotatex:-38% !important;
-        flex-direction: column !important;
-    }
+
+    #about{
+        .section-body{
+            $rotatex:-38% !important;
+            flex-direction: column !important;
+        }
+        .slider{
+            animation: sliderRotate-medium  infinite linear  90s !important;
+        }
+    } 
 }
 @media ($medium-below){ //992
     
-    #about .section-body{
-        gap: 2.2rem !important;
+    #about{
+        &:before{
+            box-shadow: unset !important;
+        }
+        .section-body{
+            gap: 2.2rem !important;
+        }
     }
 
 }
