@@ -35,9 +35,10 @@ section#about{
         content: "";
         position: absolute;
         inset: 0;
-        z-index:-1 ;
-        box-shadow: inset 41px 45px 69px 24px var(--bg-header);
+        z-index: -1;
+        box-shadow: inset 41px 45px 69px 24px var(--primary);
         z-index: 1;
+        transition: 0.8s;
     }
     .container{
         perspective:1000px; //for 3d
@@ -96,7 +97,7 @@ section#about{
             // font-size: 1.2rem;
             font-size: clamp(1rem, 2vw, 1.2rem); 
             color: var(--title);
-            background-color: #8282823b;
+            background-color: #82828282;
             padding: 1rem;
             border-radius: 20px;
             line-height: var(--line-height);
