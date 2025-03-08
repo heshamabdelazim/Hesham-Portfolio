@@ -9,8 +9,6 @@ const Header = ({ IDs, chosenMood, setChosenMood }) => {
   let switchBtn = useRef();
 
   // =========================
-  // JSX
-  console.log(chosenMood.icon);
 
   return (
     <header id="header" className=" d-flex ">

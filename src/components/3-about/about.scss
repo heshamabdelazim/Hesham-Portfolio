@@ -31,15 +31,7 @@ section#about{
     justify-content: center;
     position: relative;
     gap: 5.6rem;
-    &:before{
-        content: "";
-        position: absolute;
-        inset: 0;
-        z-index: -1;
-        box-shadow: inset 41px 45px 69px 24px var(--primary);
-        z-index: 1;
-        transition: 0.8s;
-    }
+
     .container{
         perspective:1000px; //for 3d
         position: relative;}
@@ -54,6 +46,7 @@ section#about{
                 border-radius: $radius;
                 overflow: hidden;
                 z-index: 1;
+                padding: 0.6rem 0 0 0;
                 @include flexCenter;
                 flex-basis: 20%;
                 .bg-orange{
@@ -69,6 +62,7 @@ section#about{
                 .my-img{
                     /* border: 2px solid green; */
                     width: 200px;
+                    height: 100%;
                     animation: changeBg 20s alternate infinite;
                     position: relative;
                 }
@@ -174,9 +168,6 @@ section#about{
 @media ($medium-below){ //992
     
     #about{
-        &:before{
-            box-shadow: unset !important;
-        }
         .section-body{
             gap: 2.2rem !important;
         }

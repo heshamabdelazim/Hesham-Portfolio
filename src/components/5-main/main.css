@@ -1,60 +1,41 @@
 /*========================
     table contents
 ==========================
-
 - section#projects design: 
-- left section
 - right section
 - every project(div) in the right section
 - Footer of every div
 - media query
 - animation
-- 
-
 */
 
-
-
-
-/*========================
+/*=
     section#projects design
-==========================*/
+=*/
 section#projects .section-body{
     gap: 2rem;
     justify-content: space-between;
     align-items: flex-start;
-    /* margin-top: ; */
 }
 
-/*========================
-    Left section
-==========================*/
-section#projects .left-section{
-    flex-direction: column;
-    gap: 2rem;
-    align-items: stretch;
-    position: sticky;
-    top: 15%;
-}
-
-section#projects .left-section div:active{
-    scale: 0.9;
-}
-
-/*========================
+/*=
     right section
-==========================*/
+=*/
 section#projects .right-section{
-    flex-grow: 1;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 2rem;
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.6rem;
+    /* display: grid; */
+    /* grid-template-columns: repeat(auto-fill, minmax(500px, 1fr)); */
+    /* gap: 2.5rem; */
 }
 
-/*========================
+/*=
     every project(div) in the right section
-==========================*/
+=*/
 section#projects .right-section .project{
+    flex: 1 100%;
     color: white;
     border-radius: 6px;
     transition: 0.5s linear;
@@ -67,8 +48,7 @@ section#projects .right-section .project{
     justify-content: space-between;
     border-radius: 8px;
     overflow: hidden;
-    border: 3px solid orange;
-    /* font-size: clamp(1rem, calc(1.2vw + 0.5rem), 2rem); */
+    border: 4px solid var(--orange);
 }
 section#projects .right-section .project i{
     position: absolute;
@@ -76,23 +56,18 @@ section#projects .right-section .project i{
     right: 10%;
     bottom: 7%;
     opacity: 0.7;
-    /* z-index: -1; */
-
 }
-
 section#projects .right-section .project:hover{
     transform: translateY(-4px);
     box-shadow: 1px 1px 15px 5px gray ;
 }
-
 section#projects .project:hover::before, section#projects .project:hover::after{
     height: 100%;
 }
-
 section#projects .right-section .project img{
     width: 100%;
+    height: 100%;
 }
-
 section#projects .right-section .project article{
     padding: 0.9rem;
 }
@@ -102,18 +77,16 @@ section#projects .right-section .project article p{
     z-index: 2;
     width: 80%;
 }
-
 section#projects .right-section .project header{
     font-weight: bold;
     font-size: 1.3rem;
 }
-/*========================
+/*=
     Footer of right divs
-==========================*/
-
+=*/
 section#projects .right-section .project .footer :where(.links, h4){
     gap: 0.2rem;
-    background-color: orange;
+    background-color: var(--orange);
     display: inline-flex;
     border-top-right-radius: 6px;
     box-shadow: 3px 4px 9px 0px #2b2b2b;
@@ -121,52 +94,42 @@ section#projects .right-section .project .footer :where(.links, h4){
 section#projects .right-section .project .footer h4{
     padding: 0.5rem;
 }
-
 section#projects .right-section .project .footer span{
     border-radius: 50%;
     font-size: 1.3rem;
 }
 section#projects .right-section .project .footer a{
     padding: 0.5rem;
-    /* height: 100%; */
 }
 section#projects .right-section .project .footer a:hover{
     background-color: rgba(255, 255, 255, 0.537);
 }
 
-/* in case there you didn't finsh a project */
+/* in case, you didn't finsh a project */
 section#projects .right-section .project .footer h4{
     color: black;
 }
 
-/*========================
+/*=
     media query
-==========================*/
-
+=*/
 @media(max-width:768px){
-    section#projects .container{
-        gap: 0.7rem;
-        /* flex-direction: column; */
-    }
-    section#projects .left-section{
-        /* flex-direction: row; */
-        gap: 1rem;
-    }
-    section#projects .left-section .btn-ui{
-        padding:0.6rem ;
-        min-width:unset;
-    }
-    section#projects .left-section div:hover,section#projects .left-section div.active{
-        letter-spacing: unset;
-    }
-    /* section#projects .right-section{
-        grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
-        } */
-        
+        section#projects .container{
+            gap: 0.7rem;
+            /* flex-direction: column; */
+        }
+        section#projects .section-body{
+            gap: 0.8rem;
+        }
+        section#projects .right-section .project article p{
+            width: 90%;
+            line-height: 1rem;
+        }
     }
 @media(max-width:550px){
     section#projects .right-section .project{
         font-size:0.7rem ;
+        border-width: 2.6px ;
     }
     section#projects .right-section .project .footer a{
         padding: 0.2rem;
@@ -174,15 +137,21 @@ section#projects .right-section .project .footer h4{
     section#projects .right-section .project .footer span{
         font-size: 1rem;
     }
-    section#projects .right-section{
-        grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+    section#projects .right-section .project article{
+        padding: 0.6rem;
+    }
+    section#projects .right-section .project article h2{
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+    section#projects .right-section .project i{
+        font-size: 2rem;
     }
 }
 
-    /*========================
+/*=
     animation
-==========================*/
-
+=*/
 @keyframes appear{
     0%{
         transform: scale(0.7) rotate(0);
@@ -199,6 +168,3 @@ section#projects .right-section .project .footer h4{
         opacity: 1;
     }
 }
-
-
-

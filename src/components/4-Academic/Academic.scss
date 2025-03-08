@@ -1,33 +1,24 @@
 @import "../3-about/about.scss";
+$colorOfboxShadow: rgba(0, 0, 0, 0.358);
 section#academic{
     .section-body{
         gap: 1.8rem;
         align-items: flex-start;
-        ul.taps{
+        ul.taps .tap{
             display: flex;
-            // flex-basis: 25%;
-            flex-direction: column;
-            gap: 1.4rem;
-            // padding: 0.7rem;
-            .tap{
-                display: flex
-                ;
-                    gap: 0.5rem;
-                    justify-content: flex-start;
-                    text-align: start;
-                    font-size: clamp(1rem, 1.5vw, 1.6rem);
-                    padding: var(--padding-tap);
-                &.active img{background-color: white;}
+            gap: 0.5rem;
+            // justify-content: flex-start;
+            // text-align: start;   
+            &.active img{background-color: white;}
+            img{
+                width: 36px;
+                height: 28px;
+                object-fit: contain;
+                border-radius: 15%;
+            }
+            &:hover{
                 img{
-                    width: 36px;
-                    height: 28px;
-                    object-fit: contain;
-                    border-radius: 15%;
-                }
-                &:hover{
-                    img{
-                        background-color: white;
-                    }
+                    background-color: white;
                 }
             }
         }
@@ -61,22 +52,29 @@ section#academic{
                     display: grid;
                     grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
                     gap: 1.2rem;
-                    img{
-                        width: 250px;
-                        height: 180px;
-                        object-fit: contain;
-                    }
                 }
                 figure{
                     cursor: pointer;
                     transition: 0.6s;
-                    // display: flex;
-                    // justify-content: center;
-                    // align-items: center;
                     @include flexCenter;
                     flex-direction: column;
+                    border-radius: 50%;
+                    gap: 0.2rem;
+                    box-shadow:inset 10px 11px 15px white, inset -10px -11px 15px #7c7c7c99;
+                    padding: 1.5rem;
+                    overflow: hidden;
+                    animation: startFig 1s;
+                    img{
+                        max-width: 85%;
+                        height: 180px;
+                        object-fit: contain;
+                        filter: drop-shadow(2px 4px 6px $colorOfboxShadow);
+                        // border-radius: 20%;
+                    }
                     &:hover{
                         scale: 1.08;
+                        filter: drop-shadow(2px 4px 10px $colorOfboxShadow);
+                        box-shadow:unset;
                     }
                     figcaption{
                         text-align: center;
@@ -121,13 +119,39 @@ section#academic{
             transform:  scale(1);
         }
     }
+    @keyframes startFig{
+        0%{
+            opacity: 0;
+            scale: 0.8;
+            box-shadow:unset;
+        }
+        40%{
+            scale: 1;
+            box-shadow:unset;
+        }
+        100%{
+            box-shadow:inset 10px 11px 15px white, inset -10px -11px 15px #7c7c7c99;
+            opacity: 1;
+
+        }
+    }
 
 @media($small-below){
     #academic{
         .section-body{
             gap: 0.8rem !important;
         }
-        .tap-details{ 
+        .tap-details{
+            .imgs-holder{
+                grid-template-columns: repeat(auto-fill, minmax(195px,1fr)) !important;
+                figure{
+                    padding: 0.6rem !important;
+                    padding-bottom: 1.5rem !important;
+                    figcaption{
+                        font-size: 0.8rem;
+                    }
+                }
+            } 
             img{
                 width: 180px !important;
                 height: 150px !important;
@@ -138,3 +162,4 @@ section#academic{
         }
     } 
 }
+

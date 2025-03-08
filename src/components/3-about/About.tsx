@@ -1,14 +1,23 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { FC, useContext, useEffect, useRef } from "react";
 import "./about.scss";
 
 // import myImage from "../../../public/images/formal-removebg-preview.png";
-import myImage from "/public/images/formal-removebg-preview.png";
+import myImage from "/images/formal-removebg-preview.png";
+import { MyContext } from "../../context/context";
+import { animateSection } from "../../utilis/animate-section";
+interface spanStyle{
+  color: String,
+  fontWeight:String,
+}
 
-function About() {
-  interface spanStyle{
-    color: String,
-    fontWeight:String,
-  }
+function About(): FC {
+    let contextData = useContext(MyContext);
+    const aboutDom = useRef();
+    useEffect(() => {
+      //side Effect
+      animateSection(contextData.userScreen_h, aboutDom.current);
+    }, []);
+
   const importantSpan :spanStyle = {
     color: "var(--orange)",
     fontWeight: "bold",
@@ -28,14 +37,14 @@ function About() {
   ];
   const distance_btwn_logos:number = 360 / Tech_Classes_Icons.length;
   return (
-    <section id="about">
+    <section id="about" ref={aboutDom}>
       <div className="container">
       <h2 className="title">About me</h2>
       {/* First section is => image with all technologies */}
       <div className="section-body">
         <div className="img-container">
           <div className="bg-orange" />
-          <img src={myImage} className="my-img" />
+          <img src={myImage} className="my-img" loading="lazy" />
         </div>
         {/* Second section is about me */}
         <div className="desc">

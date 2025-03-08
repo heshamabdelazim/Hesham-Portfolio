@@ -15,12 +15,15 @@ export function switching(chosenMood: mood, setChosenMood): void {
   // Using function putting() again
   // ================
   if (chosenMood.mood == "light") {
-    localStorage.setItem("mood", JSON.stringify(darkMood));
-    setChosenMood(darkMood);
-    putting(darkMood);
+    mood_func(darkMood, setChosenMood);
   } else {
-    localStorage.setItem("mood", JSON.stringify(lightMood));
-    setChosenMood(lightMood);
-    putting(lightMood);
+    mood_func(lightMood, setChosenMood);
   }
+}
+// =============================
+
+function mood_func(mood, setChosenMood): void {
+  localStorage.setItem("mood", JSON.stringify(mood));
+  setChosenMood(mood);
+  putting(mood);
 }

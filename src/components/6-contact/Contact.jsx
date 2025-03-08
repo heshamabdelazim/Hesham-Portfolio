@@ -1,15 +1,22 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 // CSS
 import "./contact.css";
-// Input component isn't used
-import Input from "./Input";
 // formspree => to sending forms
 import { ValidationError, useForm } from "@formspree/react";
 // Lottie-react for animatin
 import Lottie from "lottie-react";
 import sending from "./../../animation/sending.json";
+import { animateSection } from "../../utilis/animate-section";
+import { MyContext } from "../../context/context";
 
 const Contact = () => {
+  let contextData = useContext(MyContext);
+  const contactDom = useRef();
+  useEffect(() => {
+    //side Effect
+    animateSection(contextData.userScreen_h, contactDom.current);
+  }, []);
+  // ==============
   let [icon, setIcon] = useState("icon-chevron-right");
   const [state, handleSubmit] = useForm("xwkgyzbw");
   function opening(e) {
@@ -37,8 +44,8 @@ const Contact = () => {
   // To get react-code I searched (npm i lottie-react) (https://lottiereact.com/)
 
   return (
-    <section className="contact" id="contact">
-      <div className="tap d-flex">
+    <section className="contact" id="contact" ref={contactDom}>
+      {/* <div className="tap d-flex">
         <div className="social">
           <div className="d-flex whatsapp">
             <span className="icon-whatsapp icon" />
@@ -52,7 +59,7 @@ const Contact = () => {
         <div className="arrow" onClick={(e) => opening(e)}>
           <span className={icon} />
         </div>
-      </div>
+      </div> */}
       <div className="container ">
         <h2 className="title">Contact Us</h2>
         <div className="content d-flex">

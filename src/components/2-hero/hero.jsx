@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./hero.css";
 
 import me from "/images/formal-removebg-preview.png";
@@ -8,11 +8,12 @@ import programmingAnimation from "./../../animation/coding.json";
 import MyIcons from "./MyIcons";
 import { fetchingData } from "/src/utilis/fetch.ts";
 import { allSocial } from "./data";
+import { animateSection } from "../../utilis/animate-section";
 
-const Hero = () => {
-  // const [allSocial, setAllSocial] = useState();
+const Hero = ({ screenPosition }) => {
+  const { position } = useRef(0);
   // useEffect(() => {
-  //   fetchingData("/public/project-details/social.json", setAllSocial);
+  // fetchingData("/public/project-details/social.json", setAllSocial);
   // }, []);
 
   return (
@@ -21,7 +22,7 @@ const Hero = () => {
         <div className="container d-flex ">
           <div className="details d-flex ">
             <div className="image">
-              <img src={me} alt="H-image" />
+              <img src={me} alt="H-image" loading="lazy" />
               <span className="icon-verified verify"></span>
             </div>
             <h1>Hesham Abdelazim Kamel</h1>
