@@ -1,17 +1,11 @@
 /*========================
     table contents
 ==========================
-
-A. Header designs
-B. Icons
+A. Header bar design ( icon menu + nav + light-dark icon)
+B. header-icons
 C. Pop up menu
-
 */
 
-
-/*======================
-    Header design
-========================*/
 header{
     padding: 1rem 3rem;
     justify-content: space-between;
@@ -19,52 +13,62 @@ header{
     z-index: 3;
     width: 100%;
     top: 0;
-    background: #dbdbdb00;
-    backdrop-filter: blur(6px);
+    /* background: #bdbbbb98; */
+    /* backdrop-filter: blur(4px); */
+    /* border-bottom: 2px solid var(--blue); */
 }
+
+/* header-icons globally used in the app, Its codes in index.css */
+
 header ul.d-flex{
     gap: 16px;
 }
 header .container.d-flex{
     justify-content: space-between;
-    /* padding: 1.2rem 2.4rem 0; */
 }
+
+/* header-nav */
 header nav{
-    background-color: var(--bg-header);
+    background-color:var(--header);
     padding: 0.77rem 1.6rem;
+    /* backdrop-filter: blur(5px); */
     border-radius: 50px;
-    box-shadow: 0 0 6px var(--blue);
+    box-shadow: 4px 2px 10px 0px var(--blue) inset, -4px -2px 5px 0px var(--orange) inset;
 }
-header ul li a{
-    color:rgb(238, 238, 238);
+header nav.popup-nav{
+    box-shadow: unset;
+
+}
+header nav ul li a{
     opacity: 0.9;
     font-size: 0.88rem;
+    font-weight: bold;
 }
-header ul li a:hover{
+header nav:not(.popup-nav) ul li a{
+    color:var(--text);
+}
+header nav.popup-nav ul li a{
+    color: white;
+}
+header nav ul li a:hover{
     color: var(--blue);
     opacity: 1;
     font-size: 0.9rem;
 }
-header button{
-    font-size: 1.2rem;
-}
-/*======================
-    menu icon
-========================*/
+
+/*menu icon*/
 header .menu{
     visibility: hidden;
 }
-
 @media (max-width:992px){
     header .menu{
         visibility: visible;
     }
 }
 
-/*======================
-    download button
-========================*/
+/*download button*/
 header nav.hide+div{
+    /* that div has children(.download + .icon) */
     gap: 1.5rem;
 }
 header .download button{
@@ -79,6 +83,9 @@ header .download button{
     scale: 0.9;
     border: none;
     cursor: pointer;
+}
+header button{
+    font-size: 1.2rem;
 }
 header .download button:hover{
     opacity: 1;
@@ -96,17 +103,10 @@ header .download button:active{
         padding: 0.7rem;
     }
 }
-/*======================
-    Pop up menu
-========================*/
-
+/*Pop up nav*/
   header .popup-nav{
     border-radius: unset;
     position: fixed;
-    /* top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0; */
     inset:0; /*This inset means: top:0; bottom:0; right:0; left:0; */
     background-color:rgb(40 40 48 / 75%);
     z-index: 99;
@@ -114,7 +114,6 @@ header .download button:active{
     height: 100vh;
     width: 100vw;
     animation: showing 0.5s ;
-
   }
 header .popup-nav ul{
     width: 80%;
@@ -133,15 +132,11 @@ header .popup-nav ul{
     animation: showing 0.5s;
     position: relative;
 }
-
-
 header .popup-nav span:hover{
     color: #ff6363;
     scale: 1.1;
     opacity: 1;
 }
-
-
 @keyframes showing {
     0%{
         scale: 0;

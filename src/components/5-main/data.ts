@@ -1,15 +1,15 @@
 // images
-import temp1 from "/public/images/first_project.png";
-import temp2 from "/public/images/second_project.png";
-import temp3 from "/public/images/third_template.png";
-import weather from "/public/images/Weather-app.png";
-import task from "/public/images/Task.png";
-import calcu from "/public/images/calculator.png";
-import port2 from "/public/images/port2.png";
-import soon from "/public/images/soon.webp";
-import design from "/public/images/designAgency.jpg";
-import eCommerce from "/public/images/e-commerce.jpg";
-import exam from "/public/images/exam.jpg";
+import temp1 from "/images/first_project.png";
+import temp2 from "/images/second_project.png";
+import temp3 from "/images/third_template.png";
+import weather from "/images/Weather-app.png";
+import task from "/images/Task.png";
+import calcu from "/images/calculator.png";
+import port2 from "/images/port2.png";
+import soon from "/images/soon.webp";
+import design from "/images/designAgency.jpg";
+import eCommerce from "/images/e-commerce.jpg";
+import exam from "/images/exam.jpg";
 
 interface project {
   id: number;

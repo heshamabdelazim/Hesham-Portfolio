@@ -1,16 +1,15 @@
-interface myDataStructure{
-    id: number,
-  isActive: boolean,
-  org: String,
-  logo: String,
-  course: { title: String, desc: String }[],
-  images: {title:String, imgPath:String}[]
-
-  }
-
-export const data : myDataStructure[] = [
+export interface academicStructure {
+  id: number;
+  isActive: boolean;
+  org: String;
+  logo: String;
+  course: { title: String; desc: String }[];
+  images: { title: String; imgPath: String }[];
+}
+let objId: number = 0;
+export const data: academicStructure[] = [
   {
-    id: 1,
+    id: ++objId,
     isActive: true,
     org: "University",
     logo: "/images/Damanhour-Logo.png",
@@ -48,7 +47,7 @@ export const data : myDataStructure[] = [
     ],
   },
   {
-    id: 2,
+    id: ++objId,
     isActive: false,
     org: "Self-Study",
     logo: "/images/setf-logo.png",
@@ -63,16 +62,16 @@ export const data : myDataStructure[] = [
       },
       {
         title: "How to use Jira Course",
-        desc: "Learnt tracking tasks and time in companies using Jira(Scrum and Kanban) inside a team with Agile methodology."
+        desc: "Learnt tracking tasks and time in companies using Jira(Scrum and Kanban) inside a team with Agile methodology.",
       },
       {
         title: "Postman Course",
-        desc: "Testing the API response by applying some assertions and scripting on the response body, Validating JSON Schema, Headers, Authentication, expected response data type and integrating the script into CI/CD server."
+        desc: "Testing the API response by applying some assertions and scripting on the response body, Validating JSON Schema, Headers, Authentication, expected response data type and integrating the script into CI/CD server.",
       },
       {
         title: "Problem Solving",
-        desc:"Solving Questions on Leetcode.com, Critical thinking, Reducing time complixity, increasing performance."
-      }
+        desc: "Solving Questions on Leetcode.com, Critical thinking, Reducing time complixity, increasing performance.",
+      },
     ],
     images: [
       {
@@ -85,20 +84,20 @@ export const data : myDataStructure[] = [
       },
       {
         title: "Postman",
-        imgPath:"/images/postman-interface.jpg"
+        imgPath: "/images/postman-interface.jpg",
       },
       {
-        title: "API Test Automation Certificate",
-        imgPath:"/images/API-Test-Automation.jpg"
+        title: "API Test Automation",
+        imgPath: "/images/API-Test-Automation.jpg",
       },
       {
         title: "Leetcode.com",
-        imgPath:"/images/leetcode.jpg"
-      }
+        imgPath: "/images/leetcode.jpg",
+      },
     ],
   },
   {
-    id: 3,
+    id: ++objId,
     org: "Udemy",
     isActive: false,
     logo: "/images/Udemy-logo.png",
@@ -116,7 +115,7 @@ export const data : myDataStructure[] = [
     ],
   },
   {
-    id: 4,
+    id: ++objId,
     isActive: false,
     org: "Ministry",
     logo: "/images/ministry.png",
@@ -137,8 +136,8 @@ export const data : myDataStructure[] = [
       },
       {
         title: "Database Certificate",
-        imgPath:"/images/Database.jpg"
-      }
+        imgPath: "/images/Database.jpg",
+      },
     ],
   },
 ];
