@@ -291,6 +291,7 @@ a.bugs{
   position: fixed;
   bottom: 9px;
   left: 4px;
+  z-index: 99;
 }
 a.bugs:hover{
   color: var(--text);
