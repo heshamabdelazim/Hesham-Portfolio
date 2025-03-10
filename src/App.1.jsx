@@ -69,6 +69,13 @@ export function App() {
           window.scroll(0, 0);
         }}
       />
+      <a
+        className="bugs"
+        href="https://github.com/heshamabdelazim/Hesham-Portfolio/issues"
+        target="_blank"
+      >
+        checkout the Profile bugs
+      </a>
     </>
   );
 }

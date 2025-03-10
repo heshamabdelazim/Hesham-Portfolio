@@ -256,9 +256,7 @@ to{
 
 
 
-/* =============================
-      Arrow scroll top
-================================*/
+/* Arrow scroll top*/
 [class*=arrow-up]{
   /* Notice This selector and notice (*=) it finds any element that has class
   that contains arrow-up in middle
@@ -287,6 +285,17 @@ to{
   letter-spacing: 0.06rem;
   line-height: 2rem;
 }
+
+a.bugs{
+  color: orangered;
+  position: fixed;
+  bottom: 9px;
+  left: 4px;
+}
+a.bugs:hover{
+  color: var(--text);
+}
+
   /* =============================
         media query
 ================================*/
@@ -318,6 +327,9 @@ to{
   }
   .btn-ui:where(.active,:hover){
     letter-spacing: unset !important;
+  }
+  a.bugs{
+    font-size: 12px;
   }
 }
 @media(max-width:550px){
