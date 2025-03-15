@@ -179,6 +179,10 @@ section#projects .right-section .project .footer h4{
     section#projects .right-section .project i{
         font-size: 2rem;
     }
+    section#projects .right-section .project .img-holder{
+        height: 135px;
+    }
+    /* 135px */
     section#projects .right-section .project .img-holder p.alt{
         font-size: 1.5rem;
     }
