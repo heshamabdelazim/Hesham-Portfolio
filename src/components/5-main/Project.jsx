@@ -6,7 +6,10 @@ function Project({ project }) {
 
   return (
     <div className="project round">
-      <img src={project.photo} alt={`${project.head}`} loading="lazy" />
+      <div className="img-holder">
+        <p className="alt">Loading an Image</p>
+        <img src={project.photo} alt={`${project.head}`} loading="lazy" />
+      </div>
       <article>
         <h2>{project.head}</h2>
         <p>{project.para}</p>

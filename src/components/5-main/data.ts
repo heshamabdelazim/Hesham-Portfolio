@@ -6,7 +6,7 @@ import weather from "/images/Weather-app.png";
 import task from "/images/Task.png";
 import calcu from "/images/calculator.png";
 import port2 from "/images/port2.png";
-import soon from "/images/soon.webp";
+import insta from "/images/instagram1.jpg";
 import design from "/images/designAgency.jpg";
 import eCommerce from "/images/e-commerce.jpg";
 import exam from "/images/exam.jpg";
@@ -125,8 +125,8 @@ export const allProjects: project[] = [
   },
   {
     id: ++projectId,
-    photo: soon,
-    head: "Instegram Clone",
+    photo: insta,
+    head: "Instagram Clone",
     para: "Comming Soon ",
     // repo: "https://github.com/heshamabdelazim/courses-Ecommerce",
     // demoLink: "https://main--courses-ecommerce-hesham.netlify.app/",

@@ -132,6 +132,12 @@ ul.taps div:active{
   align-items: center;
 }
 
+img{
+  width: 100%;
+  height: 100%;
+  
+}
+
 .border{
   border: 2px solid red;
 }
