@@ -27,7 +27,7 @@ const Hero = ({ screenPosition }) => {
             </div>
             <h1>Hesham Abdelazim Kamel</h1>
             <p className="parag">
-              Front-End Developer / Tester Developer <br /> Graduated from
+              Front-End Developer / Software Testing <br /> Graduated from
               faculty of science(physics) - Damanhour University.
             </p>
             <div className="social d-flex">

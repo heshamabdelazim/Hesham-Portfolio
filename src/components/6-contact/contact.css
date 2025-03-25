@@ -19,6 +19,7 @@
 ==========================*/
 .contact {
     position: relative;
+    /* padding-top: 2rem; */
 }
 .contact, .contact .container {
     overflow: hidden;

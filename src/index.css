@@ -16,7 +16,7 @@ HTML{
   --secondary: rgb(24 24 27); /*the container background*/
   --logo-border: #5eff7d;
   --tap-border-radius:6px;
-  --line-height:1.4rem; /*1.4rem*/
+  --line-height:1.48rem; /*1.4rem*/
 
   --font-size-title: clamp(2rem, 9vw, 6rem);
   --font-size-tap:clamp(1rem,2vw,1.5rem); /*responsive*/
@@ -166,6 +166,7 @@ input:disabled{
 }
 
 .title{
+  /* background-image: url(/public/images/sky-at-night.jpeg); */
   text-align: center;
   letter-spacing: 20px;
   text-shadow: 0px 3px 3px var(--blue);
@@ -174,6 +175,32 @@ input:disabled{
   text-transform: uppercase;
   font-size: var(--font-size-title);
 }
+
+/* .title{
+  background-image: url(/public/images/sky-at-night-copy.jpeg);
+  text-align: center;
+  -webkit-text-stroke: #ffffff 0.1px;
+  font-family: system-ui, sans-serif;
+  color: var(--primary);
+  margin-bottom: 2.2rem;
+  text-transform: uppercase;
+  font-size: var(--font-size-title);
+  color: transparent;
+  background-clip: text;
+  font-weight: 900;
+  animation: move-title 75s infinite linear alternate;
+} */
+/* @keyframes move-title {
+  0%{
+    background-position: 50% 0%;
+  }
+  4%{
+    opacity: 1;  
+  }
+  100%{
+    background-position: 50% 100%;
+  }
+} */
 
 section{
   min-height: 100vh;

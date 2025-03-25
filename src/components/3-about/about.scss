@@ -44,11 +44,11 @@ section#about{
                 overflow: hidden;
                 width: fit-content;
                 border-radius: $radius;
-                overflow: hidden;
                 z-index: 1;
                 padding: 0.6rem 0 0 0;
-                @include flexCenter;
+                flex-wrap: wrap;
                 flex-basis: 20%;
+                @include flexCenter;
                 .bg-orange{
                     width: 97%;
                     height: 66%;
@@ -77,11 +77,16 @@ section#about{
                     @include pesaudoLabel;
                 }
                 &:after{
-                    content: "Tester Dev";
+                    content: "Software Tester";
                     transform: rotate(90deg) translatey(-50%);
-                    left: -43px;
-                    font-size: $labelFont;
-                    top: 35%;
+                    /* transform-origin: left; */
+                    left: -66px;
+                    font-size: 20px;
+                    top: 31%;
+                    position: absolute;
+                    font-weight: bold;
+                    color: var(--text); 
+                    z-index: -1;
                     @include pesaudoLabel;
                 }
         }
@@ -91,10 +96,11 @@ section#about{
             // font-size: 1.2rem;
             font-size: clamp(1rem, 2vw, 1.2rem); 
             color: var(--title);
-            background-color: #82828282;
+            background-color: rgb(130 130 130 / 69%);
             padding: 1rem;
             border-radius: 20px;
             line-height: var(--line-height);
+            flex: 1;
         }
         .slider{
             display: flex;

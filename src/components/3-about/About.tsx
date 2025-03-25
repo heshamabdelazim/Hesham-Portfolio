@@ -39,6 +39,7 @@ function About(): FC {
   return (
     <section id="about" ref={aboutDom}>
       <div className="container">
+      {/* <h2 className="title">About me</h2> */}
       <h2 className="title">About me</h2>
       {/* First section is => image with all technologies */}
       <div className="section-body">
@@ -48,19 +49,23 @@ function About(): FC {
         </div>
         {/* Second section is about me */}
         <div className="desc">
-          Professional Front-End & Tester using{" "}
+            An enthusiastic and skilled developer based in Alexandria, Egypt, with a proven ability to leverage
+            <span style={importantSpan}> JavaScript, TypeScript, and Java</span> to create efficient and scalable solutions. <br />
+            Experienced in developing and integrating with APIs with Error handling, with a focus on
+            <span style={importantSpan}> performance optimization and reducing runtime complexity</span>. <br />Also, Proficient in software testing methodologies, including manual testing and automation using
+            <span style={importantSpan}> Postman and Selenium</span>, ensuring high-quality and reliable applications. <br />Also, Strong fundamental computer science concepts such as
+            <span style={importantSpan}> OOP, Data Structures, Algorithms, and Design Patterns</span>, along with practical database and API knowledge. <br />         {/* Strong programming languages like{" "}
           <span style={importantSpan}>
-             Java, JavaScript & TypeScript with NEXT.JS
-          </span>{" "}
-          based in Egypt. <br /> My passion of programming world started 3 years
-          ago. <br />
+             Java, JavaScript & TypeScript leveraging Next.js</span>{" "}
+          for front-end development, based in Alexandria, Egypt. <br />Passionate with 2 years of experience in the programming field.<br />
           I have built numerous front-end projects, integrating them with
-          back-ends and optimizing their performance. <br />
-          With a strong foundation in
+          back-ends and optimizing their performance using the <span style={importantSpan}>lighthouse of the browser</span>, and reducing its Runtime complexity. <br />
+          Also, Good understanding of
           <span style={importantSpan}>
             {" "}
-            Data Structures, Algorithms, OOP, System Design and Design Pattern.
-          </span>
+            OOP, Data-Structures, Algorithms, Design-Patterns, Data-Base, and API.
+            </span> <br />
+            In the flow of Software testing, Good understanding of <span style={importantSpan}>Manual and Automation Testing using Postman and Selenium</span> */}
         </div>
       </div>
       <div className="slider" >
@@ -70,10 +75,7 @@ function About(): FC {
             className="icon-container"
             style={{ transform: `rotate(${id * distance_btwn_logos}deg)` }}
           >
-            <span
-              className={iconStyle}
-              // style={{ transform: `rotate(${-id * distance_btwn_logos}deg)` }}
-              />
+            <span className={iconStyle}/>
           </div>
         ))}
         </div>
