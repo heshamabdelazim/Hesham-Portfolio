@@ -33,7 +33,7 @@ body{
 /* You just can put them all inside :root and only make .light but why I do .dark also?
 To make transition also from light to dark */
 .light{
-  --header:rgb(154 154 154);
+  --header:rgb(151 166 231);
   --primary: #d2d2d2;
   --secondary: #aeaab2; 
   --title: black;
