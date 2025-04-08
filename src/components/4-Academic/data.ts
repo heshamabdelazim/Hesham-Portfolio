@@ -66,7 +66,7 @@ export const data: academicStructure[] = [
       },
       {
         title: "Postman Course",
-        desc: "Testing the API response by applying some assertions and scripting on the response body, Validating JSON Schema, Headers, Authentication, expected response data type and integrating the script into CI/CD server.",
+        desc: "Testing the API response by applying assertions and scripting to the response body. The validation of JSON schema, headers, authentication, and validation of the expected response data type. These tests were conducted to prepare for integration with the CI/CD server.",
       },
       {
         title: "Problem Solving",
