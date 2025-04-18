@@ -7,12 +7,13 @@ import Main from "/src/components/5-main/main";
 import Contact from "/src/components/6-contact/Contact";
 import Footer from "/src/components/7-footer/Footer";
 import { lightMood, putting } from "./utilis/light-dark";
-import Loading from "./components/Loading";
+import LoadingPage from "./components/99-Loading/LoadingPage";
 
 export function App() {
   const userScreen_h = window.innerHeight; // height of Whatever screens
 
   let [showArrow, setShowArrow] = useState(false);
+  let [begin, setBegin] = useState(false);
   let [sectionsIds, setSectionsIds] = useState([]);
   let [chosenMood, setChosenMood] = useState((old) => {
     const chosen = JSON.parse(localStorage.getItem("mood")) || lightMood;
@@ -25,6 +26,8 @@ export function App() {
 
   useEffect(() => {
     // Side effect scroll
+    // console.log();
+    // window.scrollTo(0);
     window.addEventListener("scroll", () => {
       arrow_to_up();
     });
@@ -42,6 +45,7 @@ export function App() {
 
   return (
     <>
+      <LoadingPage />
       {/* This element that has background-image */}
       <Header
         IDs={sectionsIds}
@@ -57,8 +61,6 @@ export function App() {
       <Main />
       <div className="divider" />
       <Contact />
-      {/* <div className="divider" />
-      <Loading /> */}
       <div className="divider" />
       <Footer />
       <a

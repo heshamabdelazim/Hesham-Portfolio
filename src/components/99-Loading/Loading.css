@@ -1,0 +1,67 @@
+#loadingParent{
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9;
+  background-color: var(--primary);
+  perspective: 500px;
+  animation: pageAnemi_disappear var(--loadTime) ease-in forwards;
+}
+
+#loading{
+    /* transition: var(--loadTime) ease-in 3s; */
+    font-size: 4rem;
+    color: white;
+    text-align: center;
+    -webkit-text-stroke: #8c8c8c 0.5px;
+    color: transparent;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: system-ui, sans-serif;
+    background-clip: text;
+    background-image: linear-gradient(92deg, var(--blue) 0%, var(--blue) 30%, var(--orange) 70%, var(--orange) 100%);
+    position: relative;
+    overflow: hidden;
+    width: fit-content;
+    margin: auto;
+  }
+  #loadingParent #loading{
+    animation: wordLoading_increaseScale calc(var(--loadTime) - 0.15s) ease-in forwards;
+  }
+  #loading::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 400%;
+    background: linear-gradient(90deg, transparent, var(--primary), transparent);
+    left: -100%;
+    transform: translateX(-100%);
+    animation: loader 2s infinite linear;
+  }
+  
+
+  @keyframes loader{
+    to{
+    left: 100%;
+    transform: translateX(0%);
+    }
+  }
+
+  @keyframes pageAnemi_disappear {
+    90%{
+      opacity: 1;
+    }
+    95%{
+      opacity: 0;
+    }
+    96%{
+      display: none;
+    }
+    100%{display: none;}
+  }
+  @keyframes wordLoading_increaseScale{
+    90%{transform: translate3d(0px, 0px, 0px);}
+    100%{transform: translate3d(0px, 0px, 400px);}
+  }

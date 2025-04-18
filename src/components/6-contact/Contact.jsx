@@ -8,6 +8,8 @@ import Lottie from "lottie-react";
 import sending from "./../../animation/sending.json";
 import { animateSection } from "../../utilis/animate-section";
 import { MyContext } from "../../context/context";
+import Loading from "../99-Loading/Loading";
+import Message from "./Message";
 
 const Contact = () => {
   let contextData = useContext(MyContext);
@@ -19,17 +21,7 @@ const Contact = () => {
   // ==============
   let [icon, setIcon] = useState("icon-chevron-right");
   const [state, handleSubmit] = useForm("xwkgyzbw");
-  function opening(e) {
-    // console.log(e.target.parentElement);
-    const sideTap = document.querySelector(".contact .tap");
-    if (!sideTap.classList.contains("open")) {
-      sideTap.classList.add("open");
-      setIcon("icon-chevron-left");
-    } else {
-      sideTap.classList.remove("open");
-      setIcon("icon-chevron-right");
-    }
-  }
+
   // =============== input focus & blur ============
   function focusing(e) {
     // this function just adding a class to the label
@@ -40,26 +32,12 @@ const Contact = () => {
     !e.target.value &&
       e.target.previousElementSibling.classList.remove("pressed");
   }
+
   // =============== Lottie-react (animation) ============
   // To get react-code I searched (npm i lottie-react) (https://lottiereact.com/)
-
+  console.log(state);
   return (
     <section className="contact" id="contact" ref={contactDom}>
-      {/* <div className="tap d-flex">
-        <div className="social">
-          <div className="d-flex whatsapp">
-            <span className="icon-whatsapp icon" />
-            <h3>+20 121 2005 626</h3>
-          </div>
-          <div className="d-flex gmail">
-            <span className="icon-gmail icon" />
-            <h3>heshamabdelazim3@gmail.com</h3>
-          </div>
-        </div>
-        <div className="arrow" onClick={(e) => opening(e)}>
-          <span className={icon} />
-        </div>
-      </div> */}
       <div className="container ">
         <h2 className="title">Contact Us</h2>
         <div className="content d-flex">
@@ -121,9 +99,7 @@ const Contact = () => {
               </div>
               <input type="submit" disabled={state.submitting} />
             </form>
-            {state.succeeded && (
-              <span className="response">Feedback, Sent successfully.✅ </span>
-            )}
+            <Message state={state} />
           </div>
           {/* <section className="right-section hide border">{view}</section> */}
           <Lottie
@@ -145,50 +121,7 @@ const Contact = () => {
 export default Contact;
 
 /*
-// The following what I found while using (formspree)
-// Make sure to run npm install @formspree/react
-// For more help visit https://formspr.ee/react-help
+ npm install @formspree/react
+ For more help visit https://formspr.ee/react-help
 
-WHAT YOU SHOULD DO IS THE FOLLOWING?
-1-make sure you useForm("ABCD") the same that website gave you
-2-Validation is working but now I didn't use it
-
-import React from 'react';
-
-import { useForm, ValidationError } from '@formspree/react';
-function ContactForm() {
-  const [state, handleSubmit] = useForm("mgegdrvo");
-  if (state.succeeded) {
-      return <p>Thanks for joining!</p>;
-  }
-  return (
-      <form onSubmit={handleSubmit}>
-      <label htmlFor="email">
-        Email Address
-      </label>
-      <input
-        id="email"
-        type="email" 
-        name="email"
-      />
-      <ValidationError 
-        prefix="Email" 
-        field="email"
-        errors={state.errors}
-      />
-      <textarea
-        id="message"
-        name="message"
-      />
-      <ValidationError 
-        prefix="Message" 
-        field="message"
-        errors={state.errors}
-      />
-      <button type="submit" disabled={state.submitting}>
-        Submit
-      </button>
-    </form>
-  );
-}
 */

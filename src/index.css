@@ -17,7 +17,7 @@ HTML{
   --logo-border: #5eff7d;
   --tap-border-radius:6px;
   --line-height:1.48rem; /*1.4rem*/
-
+  --loadTime:3s;
   --font-size-title: clamp(2rem, 9vw, 6rem);
   --font-size-tap:clamp(1rem,2vw,1.5rem); /*responsive*/
   --padding-tap: clamp(0.3rem, 1.3vw, 0.8rem); /*responsive*/
@@ -25,6 +25,19 @@ HTML{
 }
 body{
   background-color: var(--primary);
+  animation: forwards firstScreen_isFull var(--loadTime); /*this helps the beginning loading*/
+}
+
+@keyframes firstScreen_isFull{
+  0%{max-height: 100vh;
+    overflow: hidden;
+  }
+  80%{
+    overflow: hidden;
+  }
+  to{
+    max-height: initial;
+  }
 }
 
 /* 
@@ -213,47 +226,7 @@ section.animate{
   opacity: 1;
 }
 
-#loading{
-  font-size: 4rem;
-  color: white;
-  text-align: center;
-  /* border: 1px solid; */
-  -webkit-text-stroke: #8c8c8c 0.5px;
-  color: transparent;
-  font-weight: bold;
-  text-transform: uppercase;
-  /* line-height: 7.5rem; */
-  font-family: system-ui, sans-serif;
-  background-clip: text;
-  background-image: linear-gradient(92deg, var(--blue) 0%, var(--blue) 30%, var(--orange) 70%, var(--orange) 100%);
-  position: relative;
-  overflow: hidden;
-  width: fit-content;
-  margin: auto;
-}
-#loading::before{
-  content: "";
-  position: absolute;
-  /* inset: 0; */
-  /* background-image: linear-gradient(292deg, var(--primary) 50%, #00800000 50%); */
-  background-image: linear-gradient(90 deg, var(--primary) 50%, rgba(0, 0, 255, 0) 50%);
-  height: 100%;
-  width: 100%;
-  /* transform-origin: left; */
-  top: 50%;
-    left: 50%;
-    transform: translate(-50%);
-    animation: loader 2s linear infinite;
-    /* background: red; */
 
-}
-
-
-@keyframes loader{
-to{
-  transform: translate(-50%) rotate(360deg);
-}
-}
 /* =============================
         Container + opening
 ================================*/
