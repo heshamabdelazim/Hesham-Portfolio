@@ -1,5 +1,5 @@
 #loadingParent{
-  position: absolute;
+  position: fixed;
   inset: 0;
   display: flex;
   justify-content: center;
@@ -7,6 +7,7 @@
   z-index: 9;
   background-color: var(--primary);
   perspective: 500px;
+  
   animation: pageAnemi_disappear var(--loadTime) ease-in forwards;
 }
 
@@ -64,4 +65,9 @@
   @keyframes wordLoading_increaseScale{
     90%{transform: translate3d(0px, 0px, 0px);}
     100%{transform: translate3d(0px, 0px, 400px);}
+  }
+  @media (max-width:767px){
+    #loading{
+      font-size: 2.5rem;
+    }
   }

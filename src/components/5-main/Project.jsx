@@ -1,5 +1,6 @@
 import React from "react";
 import PutLinks from "./PutLinks";
+import Loading from "../99-Loading/Loading";
 
 function Project({ project }) {
   // const isRepoOnly = !project.links.demoLink && project.links.repo;
@@ -7,7 +8,9 @@ function Project({ project }) {
   return (
     <div className="project round">
       <div className="img-holder">
-        <p className="alt">Loading an Image</p>
+        <div className="alt">
+          <Loading />
+        </div>
         <img src={project.photo} alt={`${project.head}`} loading="lazy" />
       </div>
       <article>

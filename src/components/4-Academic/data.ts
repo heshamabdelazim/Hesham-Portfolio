@@ -66,11 +66,11 @@ export const data: academicStructure[] = [
       },
       {
         title: "Postman Course",
-        desc: "Testing the API response by applying assertions and scripting to the response body. The validation of JSON schema, headers, authentication, and validation of the expected response data type. These tests were conducted to prepare for integration with the CI/CD server.",
+        desc: "Testing the API response by applying scripts and assertions to the response body, Validation of JSON schema, Headers, Authentication, and the expected response data type. These tests were conducted to be prepared for integration with the CI/CD server.",
       },
       {
         title: "Problem Solving",
-        desc: "Solving Questions on Leetcode.com, Critical thinking, Reducing time complixity, increasing performance.",
+        desc: "Solving Questions on Leetcode.com, Critical thinking, Reducing time complixity, increasing code performance.",
       },
     ],
     images: [
@@ -122,7 +122,7 @@ export const data: academicStructure[] = [
     course: [
       {
         title: "SoftWare Testing Scholarship",
-        desc: "I've learned basics of ISTQB, applied Postman, Selenium, White Box and Black Box. ",
+        desc: "I've learned basics of ISTQB material, applied Manual Testing, API Testing (Postman), Automation (Selenium-Java), White Box and Black Box. ",
       },
       {
         title: "Course Data Base Fundamentals",
