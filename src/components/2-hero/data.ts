@@ -1,31 +1,25 @@
-interface socialStructure{
-  id: number,
-  icon: String,
-  href: String,
-  title:String
+interface socialStructure {
+  id: number;
+  icon: String;
+  href: String;
+  title: String;
 }
-
-export const allSocial : socialStructure[] = [
+let id: number = 1;
+export const allSocial: socialStructure[] = [
   {
-    id: 1,
+    id: id++,
     icon: "icon-github",
     href: "https://github.com/heshamabdelazim",
     title: "GitHub",
   },
   {
-    id: 2,
+    id: id++,
     icon: "icon-envelope",
     href: "mailto:heshamabdelazim3@gmail.com",
     title: "Gmail",
   },
   {
-    id: 3,
-    icon: "icon-facebook2",
-    href: "https://www.facebook.com/hesham.abdelazim.94",
-    title: "FaceBook",
-  },
-  {
-    id: 4,
+    id: id++,
     icon: "icon-linkedin",
     href: "https://www.linkedin.com/in/hesham-abdelazim-kamel/",
     title: "LinkedIn",

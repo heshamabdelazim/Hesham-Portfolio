@@ -94,6 +94,7 @@ header .download button:hover{
 header .download button:active{
     scale: 0.9;
     transition: 0.2s;
+    background-color:var()
 }
 @media (max-width:767px){
     header nav.hide+div{

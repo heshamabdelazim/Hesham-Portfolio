@@ -21,7 +21,6 @@ HTML{
   --font-size-title: clamp(2rem, 9vw, 6rem);
   --font-size-tap:clamp(1rem,2vw,1.5rem); /*responsive*/
   --padding-tap: clamp(0.3rem, 1.3vw, 0.8rem); /*responsive*/
-
 }
 body{
   background-color: var(--primary);
