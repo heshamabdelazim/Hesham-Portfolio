@@ -19,7 +19,7 @@ HTML{
   --line-height:1.48rem; /*1.4rem*/
   --loadTime:3s;
   --font-size-title: clamp(2rem, 9vw, 6rem);
-  --font-size-tap:clamp(1rem,2vw,1.5rem); /*responsive*/
+  --font-size-tap:clamp(0.8rem,2vw,1.5rem); /*responsive*/
   --padding-tap: clamp(0.3rem, 1.3vw, 0.8rem); /*responsive*/
 }
 body{
@@ -84,7 +84,7 @@ ul.taps{
   position: sticky;
   top: 15%;
 }
-ul.taps div:active{
+ul.taps li:active{
   scale: 0.9;
 }
 .btn-ui{
@@ -340,7 +340,7 @@ a.bugs:hover{
 }
 @media(max-width:550px){
   .btn-ui{
-    min-width: 7rem;
+    min-width: 5.7rem;
     
   }
 }

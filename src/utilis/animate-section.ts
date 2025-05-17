@@ -3,6 +3,8 @@ import { MyContext } from "../context/context";
 
 export function animateSection(screenHeight: number, sectionDom): void {
   const chosenPosition = screenHeight * 0.66; //I chose some position at the bottom
+  console.log(sectionDom, "section Dom");
+
   window.addEventListener("scroll", () => {
     const sectionPosition = sectionDom.getBoundingClientRect().top; //it must be inside scroll event
     if (

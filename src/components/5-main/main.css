@@ -9,31 +9,44 @@
 - animation
 */
 
-/*=
-    section#projects design
-=*/
-section#projects .section-body{
-    gap: 2rem;
-    justify-content: space-between;
-    align-items: flex-start;
+section#projects {
+    .section-body{
+        gap: 2rem;
+        justify-content: space-between;
+        align-items: flex-start;
+        }
+        .right-section{
+        flex: 1;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2.6rem;
+    }
 }
-
-/*=
-    right section
-=*/
-section#projects .right-section{
-    flex: 1;
+section#projects .taps li a{
     display: flex;
-    flex-wrap: wrap;
-    gap: 2.6rem;
-    /* display: grid; */
-    /* grid-template-columns: repeat(auto-fill, minmax(500px, 1fr)); */
-    /* gap: 2.5rem; */
+    align-items: center;
+    justify-content: space-between;
 }
+section#projects .taps li{
+    display: block;
+    p{
+        text-overflow: ellipsis;
+        overflow: hidden;
+        flex-basis: 80%;
+    }
+    span{
+        font-size: clamp(0.5rem,1vw,0.8rem);
+        background: white;
+        width: clamp(10px,2vw,15px);
+        height: clamp(10px,2vw,15px);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-/*=
-    every project(div) in the right section
-=*/
+    }
+} 
+
 section#projects .right-section .project{
     flex: 1 100%;
     color: white;
@@ -49,19 +62,20 @@ section#projects .right-section .project{
     border-radius: 8px;
     overflow: hidden;
     border: 4px solid var(--orange);
-}
-section#projects .right-section .project i{
-    position: absolute;
-    font-size: 3rem;
-    right: 10%;
-    bottom: 7%;
-    opacity: 0.7;
+    i{
+        position: absolute;
+        font-size: 3rem;
+        right: 10%;
+        bottom: 7%;
+        opacity: 0.7;
+    }
+    &:hover{
+        transform: translateY(-4px);
+        box-shadow: 1px 1px 15px 5px gray ;
+    }
 }
 
-section#projects .right-section .project:hover{
-    transform: translateY(-4px);
-    box-shadow: 1px 1px 15px 5px gray ;
-}
+
 section#projects .project:hover::before, section#projects .project:hover::after{
     height: 100%;
 }
@@ -69,31 +83,29 @@ section#projects .right-section .project .img-holder{
     width: 100%;
     height: 380px;
     position: relative;
+    .alt{
+        font-size: 3rem;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+    }
+    img{
+        width: inherit;
+        height: inherit;
+    }
 }
-section#projects .right-section .project .img-holder .alt{
-    font-size: 3rem;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-}
-
-section#projects .right-section .project .img-holder img{
-    width: inherit;
-    height: inherit;
-}
-
 section#projects .right-section .project article{
     padding: 0.9rem;
-}
-section#projects .right-section .project article p{
-    line-height: var(--line-height);
-    position: relative;
-    z-index: 2;
-    width: 80%;
+    p{
+        line-height: var(--line-height);
+        position: relative;
+        z-index: 2;
+        width: 80%;
+    }
 }
 section#projects .right-section .project header{
     font-weight: bold;
@@ -162,29 +174,30 @@ section#projects .right-section .project .footer h4{
     section#projects .right-section .project{
         font-size:0.7rem ;
         border-width: 2.6px ;
+        i{
+            font-size: 2rem;
+        }
     }
-    section#projects .right-section .project .footer a{
-        padding: 0.2rem;
-    }
-    section#projects .right-section .project .footer span{
-        font-size: 1rem;
+    section#projects .right-section .project .footer{
+        a{
+            padding: 0.2rem;
+        }
+        span{
+            font-size: 1rem;
+        }
     }
     section#projects .right-section .project article{
         padding: 0.6rem;
-    }
-    section#projects .right-section .project article h2{
-        text-align: center;
-        margin-bottom: 0.5rem;
-    }
-    section#projects .right-section .project i{
-        font-size: 2rem;
+        h2{
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
     }
     section#projects .right-section .project .img-holder{
         height: 135px;
-    }
-    /* 135px */
-    section#projects .right-section .project .img-holder .alt{
-        font-size: 1.5rem;
+        .alt{
+            font-size: 1.5rem;
+        }
     }
 }
 

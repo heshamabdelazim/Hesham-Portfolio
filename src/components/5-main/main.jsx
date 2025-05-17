@@ -1,4 +1,10 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
+import React, {
+  useCallback,
+  useContext,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 //css
 import "./main.css";
 // components
@@ -14,26 +20,45 @@ const Main = () => {
   let contextData = useContext(MyContext);
   const mainDom = useRef();
   useEffect(() => {
-    //side Effect
+    //side Effect4
     animateSection(contextData.userScreen_h, mainDom.current);
   }, []);
   // ====================================================
   let [category, setCategory] = useState("All");
 
-  const allTaps = () => {
-    // This function to creates taps that belongs to the projects (left-section)
-    const arrayOfTaps = allProjects.map((project) => project.category);
-    arrayOfTaps.unshift("all");
-    return Array.from(new Set(arrayOfTaps));
-  };
-  // ====================================================
-  const dataRevealed = () => {
-    // This function to filter the projects the user choose from taps (right-section)
-    if (category.toLowerCase() === "all") {
-      return allProjects;
+  const handleCategory = useCallback((tab) => setCategory(tab), [category]);
+
+  const projectsFormated = () => {
+    //this return array of {tapName:String, tapsNum:number}
+    let arrayOfTaps = [{ tapName: "all", projectsArr: allProjects }];
+    for (let i = 1; i < allProjects.length; i++) {
+      if (!isDublcatedCategory(allProjects[i].category, allProjects, i)) {
+        arrayOfTaps.push({
+          tapName: allProjects[i].category,
+          projectsArr: dataRevealed(allProjects[i].category, allProjects),
+        });
+      }
     }
-    return allProjects.filter(
-      (project) => category.toLowerCase() === project.category.toLowerCase()
+    return arrayOfTaps;
+  };
+
+  // ====================================================
+  function dataRevealed(cate, arr) {
+    // This function to filter the projects the user choose from taps (right-section)
+    return arr.filter(
+      (project) => project.category.toLowerCase() === cate.toLowerCase()
+    );
+  }
+  //====================================================
+  function isDublcatedCategory(target, arr, stopSearchIndex) {
+    for (let i = 1; i < stopSearchIndex; i++) {
+      if (arr[i].category === target) return true;
+    }
+    return false;
+  }
+  const displayProjects = () => {
+    return projectsFormated().find(
+      (ele) => ele.tapName.toLocaleLowerCase() == category.toLowerCase()
     );
   };
 
@@ -43,18 +68,19 @@ const Main = () => {
         <h2 className="title">Projects</h2>
         <div className="section-body d-flex">
           <ul className="taps">
-            {allTaps().map((tap, index) => (
+            {projectsFormated().map((tap, index) => (
               <Tap
                 key={index}
-                tap={tap}
+                tap={tap.tapName}
                 category={category}
-                setCategory={setCategory}
+                handleCategory={handleCategory}
+                arrLength={tap.projectsArr.length}
               />
             ))}
           </ul>
           <div className="right-section">
-            {dataRevealed().map((project, index) => (
-              <Project key={index + 1} project={project} />
+            {displayProjects().projectsArr.map((project) => (
+              <Project key={project.id} project={project} />
             ))}
           </div>
         </div>

@@ -14,6 +14,7 @@ import Message from "./Message";
 const Contact = () => {
   let contextData = useContext(MyContext);
   const contactDom = useRef();
+
   useEffect(() => {
     //side Effect
     animateSection(contextData.userScreen_h, contactDom.current);
@@ -35,7 +36,6 @@ const Contact = () => {
 
   // =============== Lottie-react (animation) ============
   // To get react-code I searched (npm i lottie-react) (https://lottiereact.com/)
-  console.log(state);
   return (
     <section className="contact" id="contact" ref={contactDom}>
       <div className="container ">

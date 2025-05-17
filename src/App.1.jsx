@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Header from "/src/components/1-header/Header";
 import Hero from "/src/components/2-hero/hero";
 import About from "/src/components/3-about/About";
@@ -10,6 +10,7 @@ import { lightMood, putting } from "./utilis/light-dark";
 import LoadingPage from "./components/99-Loading/LoadingPage";
 
 export function App() {
+  const domArr = useRef([]);
   const userScreen_h = window.innerHeight; // height of Whatever screens
 
   let [showArrow, setShowArrow] = useState(false);

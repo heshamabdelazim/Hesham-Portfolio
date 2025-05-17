@@ -4,14 +4,14 @@ import { fetchingData } from "/src/utilis/fetch.ts";
 import { academicStructure, data } from "./data";
 import { MyContext } from "../../context/context";
 import { animateSection } from "../../utilis/animate-section";
-import Tap from "../Tap";
+import AcademicTab from "./AcademicTab";
 
-function Academic():FC {
+function Academic() {
     let contextData = useContext(MyContext);
     const academicDom = useRef();
     useEffect(() => {
       //side Effect
-      animateSection(contextData.userScreen_h, academicDom.current);
+animateSection(contextData.userScreen_h, academicDom.current);
     }, []);
   //=================
   const allTaps = data.map(obj => obj.org);
@@ -42,7 +42,7 @@ function Academic():FC {
           {/* taps */}
           <ul className="taps">
             {allTaps.map((tap,index) => (
-              <Tap key={index} tap={tap} category={ category} setCategory={setCategory} />
+              <AcademicTab key={index} tap={tap} category={ category} setCategory={setCategory} />
             ))}
           </ul>
           {/* pressed taps details */}
