@@ -29,10 +29,16 @@ section#projects .taps li a{
 }
 section#projects .taps li{
     display: block;
+    
     p{
         text-overflow: ellipsis;
         overflow: hidden;
         flex-basis: 80%;
+        color: var(--subtitle);
+        transition: 0.5s, color 0.5s 0.1s;;
+    }
+    &:hover p, &.active p{
+        color:white
     }
     span{
         font-size: clamp(0.5rem,1vw,0.8rem);
