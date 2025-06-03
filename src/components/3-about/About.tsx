@@ -49,11 +49,11 @@ function About(): FC {
         </div>
         {/* Second section is about me */}
         <div className="desc">
-            An enthusiastic and skilled developer based in Alexandria, Egypt, with a proven ability to leverage
-            <span style={importantSpan}> JavaScript, TypeScript, and Java</span> to create efficient and scalable solutions. <br />
-            Experienced in developing and integrating with APIs with Error handling, with a focus on
-            <span style={importantSpan}> Performance, Optimization and Reducing Runtime Complexity</span>. <br />Also, Proficient in software testing methodologies, including Manual Testing, API Testing, and Automation using
-            <span style={importantSpan}> Postman and Selenium</span>, ensuring high-quality and reliable applications. <br />Also, Strong fundamental computer science concepts such as
+            Skilled developer based in Alexandria, Egypt, using
+            <span style={importantSpan}> JavaScript, TypeScript, and Java</span> to create efficient and appropriate solutions.
+            Integrating with <span style={importantSpan}>APIs and third parties</span>, and applying Error handling, with a focus on
+            <span style={importantSpan}> Performance, Optimization, Reducing Runtime Complexity and reliable applications</span>. <br />Also Strong knowledge on the software testing track, including Manual Testing, API Testing, and Automation using
+            <span style={importantSpan}> Postman and Selenium</span>, This includes generating reports of bugs, applying assertions and tracking the app quality. Supported by, studying the fundamental computer science concepts such as
             <span style={importantSpan}> OOP, Data Structures, Algorithms, and Design Patterns</span>, along with practical
             <span style={importantSpan}> Database</span> and
             <span style={importantSpan}> API</span> knowledge. <br />
