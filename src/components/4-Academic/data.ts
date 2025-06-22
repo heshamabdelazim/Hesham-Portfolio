@@ -138,6 +138,10 @@ export const data: academicStructure[] = [
         title: "Database Certificate",
         imgPath: "/images/Database.jpg",
       },
+      {
+        title: "TL Certificate",
+        imgPath: "/images/Software-Testing.jpg",
+      },
     ],
   },
 ];
