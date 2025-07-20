@@ -1,10 +1,4 @@
-import React, {
-  useCallback,
-  useContext,
-  useEffect,
-  useRef,
-  useState,
-} from "react";
+import { useCallback, useContext, useEffect, useRef, useState } from "react";
 //css
 import "./main.css";
 // components
@@ -29,17 +23,17 @@ const Main = () => {
   const handleCategory = useCallback((tab) => setCategory(tab), [category]);
 
   const projectsFormated = () => {
-    //this return array of {tapName:String, tapsNum:number}
-    let arrayOfTaps = [{ tapName: "all", projectsArr: allProjects }];
+    //this return {tapName:String, projectsArr:[]}[] => every tab will display projects
+    let tabs_hasContent = [{ tapName: "all", projectsArr: allProjects }];
     for (let i = 1; i < allProjects.length; i++) {
       if (!isDublcatedCategory(allProjects[i].category, allProjects, i)) {
-        arrayOfTaps.push({
+        tabs_hasContent.push({
           tapName: allProjects[i].category,
           projectsArr: dataRevealed(allProjects[i].category, allProjects),
         });
       }
     }
-    return arrayOfTaps;
+    return tabs_hasContent;
   };
 
   // ====================================================
@@ -56,6 +50,7 @@ const Main = () => {
     }
     return false;
   }
+
   const displayProjects = () => {
     return projectsFormated().find(
       (ele) => ele.tapName.toLocaleLowerCase() == category.toLowerCase()

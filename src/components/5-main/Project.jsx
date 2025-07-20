@@ -1,17 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import PutLinks from "./PutLinks";
 import Loading from "../99-Loading/Loading";
 
 function Project({ project }) {
-  // const isRepoOnly = !project.links.demoLink && project.links.repo;
+  let [isMouseOn, setIsMouseOn] = useState(false);
+
+  function showAssets() {
+    if (isMouseOn && project.video)
+      return (
+        <video src={project.video} controls>
+          <source src={project.video} type="video/mp4" />
+        </video>
+      );
+    if ((isMouseOn && !project.video) || !isMouseOn)
+      return <img src={project.photo} alt={`${project.head}`} loading="lazy" />;
+    return;
+  }
 
   return (
-    <div className="project round">
+    <div
+      className="project round"
+      onMouseOver={() => setIsMouseOn(true)}
+      onMouseOut={() => setIsMouseOn(false)}
+    >
       <div className="img-holder">
         <div className="alt">
           <Loading />
         </div>
-        <img src={project.photo} alt={`${project.head}`} loading="lazy" />
+        {showAssets()}
       </div>
       <article>
         <h2>{project.head}</h2>

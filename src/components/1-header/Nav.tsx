@@ -10,8 +10,8 @@ const Nav = ({ IDs, setShow,isSmallScreens=false }:navProps)  => {
   return (
     <nav className={isSmallScreens?"popup-nav":"hide d-flex"}>
       <ul className="d-flex">
-      {IDs.map((idName, id) => (
-        <li key={id}>
+      {IDs.map((idName) => (
+        <li key={idName}>
           <a href={"#" + idName} onClick={()=>setShow(false)}>{idName.toUpperCase()}</a>
         </li>
       ))}

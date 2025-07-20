@@ -10,11 +10,10 @@ import { lightMood, putting } from "./utilis/light-dark";
 import LoadingPage from "./components/99-Loading/LoadingPage";
 
 export function App() {
-  const domArr = useRef([]);
-  const userScreen_h = window.innerHeight; // height of Whatever screens
+  // const domArr = useRef([]);
+  // const userScreen_h = window.innerHeight; // height of Whatever screens
 
   let [showArrow, setShowArrow] = useState(false);
-  let [begin, setBegin] = useState(false);
   let [sectionsIds, setSectionsIds] = useState([]);
   let [chosenMood, setChosenMood] = useState((old) => {
     const chosen = JSON.parse(localStorage.getItem("mood")) || lightMood;
@@ -27,8 +26,6 @@ export function App() {
 
   useEffect(() => {
     // Side effect scroll
-    // console.log();
-    // window.scrollTo(0);
     window.addEventListener("scroll", () => {
       arrow_to_up();
     });
