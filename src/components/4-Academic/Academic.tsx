@@ -1,6 +1,5 @@
 import React, { FC, useContext, useEffect, useRef, useState } from "react";
 import "./Academic.scss";
-import { fetchingData } from "/src/utilis/fetch.ts";
 import { academicStructure, data } from "./data";
 import { MyContext } from "../../context/context";
 import { animateSection } from "../../utilis/animate-section";
@@ -11,7 +10,7 @@ function Academic() {
     const academicDom = useRef();
     useEffect(() => {
       //side Effect
-animateSection(contextData.userScreen_h, academicDom.current);
+      animateSection(contextData.userScreen_h, academicDom.current);
     }, []);
   //=================
   const allTaps = data.map(obj => obj.org);
@@ -41,8 +40,8 @@ animateSection(contextData.userScreen_h, academicDom.current);
         <div className="section-body d-flex">
           {/* taps */}
           <ul className="taps">
-            {allTaps.map((tap,index) => (
-              <AcademicTab key={index} tap={tap} category={ category} setCategory={setCategory} />
+            {allTaps.map((tab) => (
+              <AcademicTab key={tab.id} tab={tab} category={ category} setCategory={setCategory} />
             ))}
           </ul>
           {/* pressed taps details */}

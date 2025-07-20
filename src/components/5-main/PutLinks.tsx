@@ -1,6 +1,6 @@
 
 function PutLinks({ repo, demo }:{repo:String, demo:String}) :React.JSX.Element  {
-    const AreNoLinks = !demo && !repo; //true or false
+    const AreNoLinks:boolean = !demo && !repo;
     if (AreNoLinks) {
         return(<h4>Soon.</h4>)
     }

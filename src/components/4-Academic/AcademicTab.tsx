@@ -1,14 +1,13 @@
 import React from 'react'
 
-function AcademicTab({ tap, category, setCategory }) {
-  const isActiveTap = category.toLowerCase() == tap.toLowerCase();
+function AcademicTab({ tab, category, setCategory }) {
+  const isActiveTab = category.toLowerCase() == tab.toLowerCase();
   return (
     <li
-      key={tap.id}
-      className={`btn-ui ${isActiveTap ? "active" : ""}`}
-      onClick={(e) => setCategory(tap)}
+      className={`btn-ui ${isActiveTab ? "active" : ""}`}
+      onClick={(e) => setCategory(tab)}
     >
-      {tap}
+      {tab}
     </li>
   );
 }

@@ -1,7 +1,7 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import Nav from "./Nav";
 import "./header.css";
-import { lightMood, putting, switching } from "/src/utilis/light-dark";
+import { switching } from "/src/utilis/light-dark";
 import DownloadCV from "./DownloadCV";
 
 const Header = ({ IDs, chosenMood, setChosenMood }) => {

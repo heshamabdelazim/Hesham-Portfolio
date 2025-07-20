@@ -99,7 +99,7 @@ section#projects .right-section .project .img-holder{
         inset: 0;
         z-index: -1;
     }
-    img{
+    img,video{
         width: inherit;
         height: inherit;
     }
