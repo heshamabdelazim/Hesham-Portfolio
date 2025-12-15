@@ -15,15 +15,15 @@ export const data: academicStructure[] = [
     logo: "/images/Damanhour-Logo.png",
     course: [
       {
-        title: "Damanhour University - Physics Department",
+        title: "Damanhour University",
         desc: "In my 4 years and half, I studied theories of physics, Statics, Dynamics and Electronics.",
       },
       {
-        title: "Physics Department Subjects",
+        title: "Physics Department",
         desc: "All of Mathmatics branches. like [Statistics and Probability, Differential Equation, Mathematical Physics, Computational Mathematics, Matrix] ",
       },
       {
-        title: "Programms used during University",
+        title: "Programms",
         desc: "Matlab - MS office",
       },
       {
@@ -41,7 +41,7 @@ export const data: academicStructure[] = [
         imgPath: "/images/graduation.jpg",
       },
       {
-        title: "Matlab-work",
+        title: "Matlab",
         imgPath: "/images/university-pro.PNG",
       },
     ],
@@ -53,20 +53,20 @@ export const data: academicStructure[] = [
     logo: "/images/setf-logo.png",
     course: [
       {
-        title: "Fundamentals of Web",
+        title: "Web Fundamentals",
         desc: "On Elzero Web School(YouTube), I've learnt HTML, CSS, SASS and JS. I also made 4 templates of web using HTML and CSS with respect to SEO and Semantic Elements, ",
       },
       {
-        title: "Frame work of JavaScript (React.js)",
+        title: "JavaScript (React.js)",
         desc: "on Code-Zone(YouTube), I've learnt React best practices and its projects.",
       },
       {
-        title: "How to use Jira Course",
+        title: "Jira",
         desc: "Learnt tracking tasks and time in companies using Jira(Scrum and Kanban) inside a team with Agile methodology.",
       },
       {
-        title: "Postman Course",
-        desc: "Testing the API response by applying scripts and assertions to the response body, Validation of JSON schema, Headers, Authentication, and the expected response data type. These tests were conducted to be prepared for integration with the CI/CD server.",
+        title: "Postman",
+        desc: "Testing the API response by applying scripts and assertions to the response body, Validation of JSON schema, Headers, Authentication, and the expected response data type.",
       },
       {
         title: "Problem Solving",
@@ -125,7 +125,7 @@ export const data: academicStructure[] = [
         desc: "I've learned basics of ISTQB material, applied Manual Testing, API Testing (Postman), Automation (Selenium-Java), White Box and Black Box. ",
       },
       {
-        title: "Course Data Base Fundamentals",
+        title: "Relational DataBase",
         desc: "From  understanding of database and data analysis tried to make queries of data with relationships between each other.",
       },
     ],

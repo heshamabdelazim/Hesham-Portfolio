@@ -6,8 +6,9 @@ import Academic from "/src/components/4-Academic/Academic";
 import Main from "/src/components/5-main/main";
 import Contact from "/src/components/6-contact/Contact";
 import Footer from "/src/components/7-footer/Footer";
-import { lightMood, putting } from "./utilis/light-dark";
+import { lightMood, setClassName_body } from "./utilis/light-dark";
 import LoadingPage from "./components/99-Loading/LoadingPage";
+import BG_particles from "./components/98-particles/BG_particles";
 
 export function App() {
   // const domArr = useRef([]);
@@ -19,7 +20,7 @@ export function App() {
     const chosen = JSON.parse(localStorage.getItem("mood")) || lightMood;
     !localStorage.getItem("mood") &&
       localStorage.setItem("mood", JSON.stringify(chosen));
-    putting(chosen);
+    setClassName_body(chosen);
     return chosen;
   });
   let { allSections } = useRef();
@@ -43,6 +44,7 @@ export function App() {
 
   return (
     <>
+      <BG_particles />
       <LoadingPage />
       {/* This element that has background-image */}
       <Header

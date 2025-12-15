@@ -77,10 +77,10 @@ section#about{
                     @include pesaudoLabel;
                 }
                 &:after{
-                    content: "Software Tester";
+                    content: "Full Stack";
                     transform: rotate(90deg) translatey(-50%);
                     /* transform-origin: left; */
-                    left: -66px;
+                    left: -40px;
                     font-size: 20px;
                     top: 31%;
                     position: absolute;
