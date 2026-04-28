@@ -1,17 +1,9 @@
 import React, { FC, useContext, useEffect, useRef, useState } from "react";
 import "./Academic.scss";
 import { academicStructure, data } from "./data";
-import { MyContext } from "../../context/context";
-import { animateSection } from "../../utilis/animate-section";
 import AcademicTab from "./AcademicTab";
 
 function Academic() {
-    let contextData = useContext(MyContext);
-    const academicDom = useRef();
-    useEffect(() => {
-      //side Effect
-      animateSection(contextData.userScreen_h, academicDom.current);
-    }, []);
   //=================
   const allTaps = data.map(obj => obj.org);
   const [category, setCategory] = useState(allTaps[0]);
@@ -34,9 +26,7 @@ function Academic() {
   }
 
   return (
-    <section id="academic" ref={academicDom}>
-      <div className="container">
-        <h2 className="title">Academic Dev</h2>
+    <>
         <div className="section-body d-flex">
           {/* taps */}
           <ul className="taps">
@@ -73,9 +63,7 @@ function Academic() {
             </div>
           )
         }
-      </div>
-
-    </section>
+</>
   );
 }
 

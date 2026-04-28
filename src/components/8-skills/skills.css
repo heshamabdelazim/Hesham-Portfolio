@@ -1,0 +1,38 @@
+#skills{
+    #parent{
+            text-align: center;
+        gap: 20px;
+        column-gap: 3rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        #box{
+            background-color: var(--secondary);
+            gap: 1rem;
+            display: flex;
+            flex-direction: column;
+            text-transform: capitalize;
+            padding: 1.2rem;
+            border-radius: 1.6rem;
+            border: 1px solid var(--orange);
+            h3{
+                    letter-spacing: 5px;
+
+            }
+            p{
+                color: var(--blue);
+                 opacity: 0.8;
+            }
+            #tags{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 15px;
+                color: black;
+                span{
+                    padding: 0.5rem;
+                    border-radius: 13px;
+                    background-color: var(--orange);
+                }
+            }
+        }
+    }
+}

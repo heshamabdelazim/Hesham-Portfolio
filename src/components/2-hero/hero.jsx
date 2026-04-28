@@ -1,21 +1,17 @@
-import React, { useEffect, useRef, useState } from "react";
 import "./hero.css";
 
-import me from "/images/formal-removebg-preview.png";
+import me from "/images/logo.png";
 // lottie-react for animation
 import Lottie from "lottie-react";
 import programmingAnimation from "./../../animation/coding.json";
 import MyIcons from "./MyIcons";
 import { fetchingData } from "/src/utilis/fetch.ts";
 import { allSocial } from "./data";
-import { animateSection } from "../../utilis/animate-section";
 
-const Hero = ({ screenPosition }) => {
-  const { position } = useRef(0);
+const Hero = () => {
   // useEffect(() => {
   // fetchingData("/public/project-details/social.json", setAllSocial);
   // }, []);
-
   return (
     <section id="openning">
       <div className="hero">
@@ -27,8 +23,8 @@ const Hero = ({ screenPosition }) => {
             </div>
             <h1>Hesham Abdelazim Kamel</h1>
             <p className="parag">
-              {"</>"} Front-End Developer <br /> Graduated from faculty of
-              science(physics) - Damanhour University.
+              {"</>"} Front-End Developer <br />
+              {"</>"} Software Engineer
             </p>
             <div className="social d-flex">
               <MyIcons allSocial={allSocial} />

@@ -17,18 +17,18 @@
 /*========================
     contact design
 ==========================*/
-.contact {
+#contact {
     position: relative;
     /* padding-top: 2rem; */
 }
-.contact, .contact .container {
+#contact, #contact .container {
     overflow: hidden;
 }
-.contact .container > h3{
+#contact .container > h3{
     text-align: center;
     color: var(--text);
 }
-.contact .container > h2{
+#contact .container > h2{
     margin-bottom: 1rem;
 }
 
@@ -36,7 +36,7 @@
  /*========================
     design side-tap
 ==========================*/
-.contact .tap{
+#contact .tap{
      position: absolute;
     z-index: 3;
     top: 20%;
@@ -50,13 +50,13 @@
     transition: 0.8s cubic-bezier(0.27, -0.37, 0.9, 1);
     transform: translateX(-90%);
 }
-.contact .social{
+#contact .social{
     padding: 0.5rem 1rem;
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-.contact .social :where(.whatsapp, .gmail){
+#contact .social :where(.whatsapp, .gmail){
     justify-content: flex-start;
     gap: 20px;
     width: fit-content;
@@ -64,13 +64,13 @@
     /* margin: auto; */
     position: relative;
 }
-.contact :where(.whatsapp, .gmail) span.icon{
+#contact :where(.whatsapp, .gmail) span.icon{
     background-color: #ffffff8c;
     padding: 0.2rem;
     border-radius: 50%;
     font-weight: 900;
 }
-.contact .tap .arrow{
+#contact .tap .arrow{
     /* background: transparent; */
     background-color: rgb(78 178 124);
     border: none;
@@ -83,14 +83,14 @@
     cursor: pointer;
     transition: 0.2s;
 }
-.contact .tap .arrow:hover{
+#contact .tap .arrow:hover{
     color: black;
     background-color:rgb(70, 164, 114) ;
 }
-.contact .tap .arrow span{
+#contact .tap .arrow span{
     animation: arrow-move 1.4s infinite alternate;
 }
-.contact .tap.open{
+#contact .tap.open{
     /* left: 0; */
     transform: translateX(0);
 }
@@ -98,12 +98,12 @@
 /*========================
 design background-photo (It's deleted)
 ==========================*/
-.contact .content{
+#contact .content{
     justify-content: space-between;
     margin-top: 2rem;
     gap: 20px;
 }
-.contact .content .left-section .mail{
+#contact .content .left-section .mail{
     background-color: gray;
     padding: 5rem 1rem;
     width: 64%;
@@ -116,7 +116,7 @@ design background-photo (It's deleted)
     transform: translate(-50%, -50%);
     opacity: 0.4;
 }
-.contact .left-section .mail::before{
+#contact .left-section .mail::before{
     content: "";
     position: absolute;
     width: 0%;
@@ -132,18 +132,18 @@ design background-photo (It's deleted)
  /*========================
     left-section(form)
 ==========================*/
-.contact .content .left-section{
+#contact .content .left-section{
     flex-basis: 70%;
     position: relative;
 }
-.contact .left-section form{
+#contact .left-section form{
     position: relative;
     z-index: 2;
     flex-direction: column;
     gap: 1.5rem;
     align-items: flex-start;
 }
-.contact .left-section form div{
+#contact .left-section form div{
     /* border: 2px solid var(--blue); */
     position: relative; 
     padding: 1rem;
@@ -151,7 +151,7 @@ design background-photo (It's deleted)
     padding: 1rem 1rem 0.7rem;
     border-radius: 6px;
 }
-.contact .left-section form div label{
+#contact .left-section form div label{
     position: absolute;
     padding: 0.3rem;
     transition: 0.6s;
@@ -162,14 +162,14 @@ design background-photo (It's deleted)
     color: var(--text);
     cursor: pointer;
 }
-.contact .left-section form div label.pressed{
+#contact .left-section form div label.pressed{
     top: 0;  
     transform: translateY(-50%); 
     background-color: var(--primary);
     opacity: 1;
     font-size: 0.8rem;
 }
-.contact .left-section form input, .contact textarea{
+#contact .left-section form input, #contact textarea{
     background-color: transparent;
     color: var(--text);
     font-weight: 400;
@@ -185,17 +185,17 @@ design background-photo (It's deleted)
 form [type="email"]{
     text-transform: none !important;
 }
-.contact textarea{
+#contact textarea{
     resize: none;
     min-height: 100px;
     border: none;
     text-transform: none;
     line-height: 2rem;
 }
-.contact .left-section form input:focus, .contact textarea{
+#contact .left-section form input:focus, #contact textarea{
     outline: none;
 }
-.contact span.response{
+#contact span.response{
     color: var(--text);
     letter-spacing: 0.4px;
     font-size: 1.3rem;
@@ -209,7 +209,7 @@ form [type="email"]{
     media quiery
 ==========================*/
 @media (max-width:992px){
-    .contact .content{
+    #contact .content{
         justify-content: center;
     }
 }
@@ -232,17 +232,17 @@ form [type="email"]{
 
 
 
-/* .contact .container .name{
+/* #contact .container .name{
     position: relative;
 }
-.contact .container .name input{
+#contact .container .name input{
     width: 90%;
     border: none;
     border-bottom: 2px solid var(--blue);
     padding: 1rem 0.5rem;
     background-color: transparent;
 }
-.contact .container .name label{
+#contact .container .name label{
     background-color: var(--primary);
     position: absolute;
     top: 50%;

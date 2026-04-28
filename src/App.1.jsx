@@ -3,12 +3,14 @@ import Header from "/src/components/1-header/Header";
 import Hero from "/src/components/2-hero/hero";
 import About from "/src/components/3-about/About";
 import Academic from "/src/components/4-Academic/Academic";
-import Main from "/src/components/5-main/main";
+import Projects from "/src/components/5-main/Projects";
 import Contact from "/src/components/6-contact/Contact";
 import Footer from "/src/components/7-footer/Footer";
 import { lightMood, setClassName_body } from "./utilis/light-dark";
 import LoadingPage from "./components/99-Loading/LoadingPage";
 import BG_particles from "./components/98-particles/BG_particles";
+import Skills from "./components/8-skills/Skills";
+import HSeciton from "./components/HSeciton";
 
 export function App() {
   // const domArr = useRef([]);
@@ -52,15 +54,31 @@ export function App() {
         chosenMood={chosenMood}
         setChosenMood={setChosenMood}
       />
+
+      {/* <HSeciton id="Hero">
+      <Hero/>    DON'T wrap Hero because it has different parent section
+      </HSeciton> */}
       <Hero />
       <div className="divider" />
-      <About />
+      <HSeciton title="About me" id="about">
+        <About />
+      </HSeciton>
       <div className="divider" />
-      <Academic />
+      <HSeciton title="projects" id="projects">
+        <Projects />
+      </HSeciton>
       <div className="divider" />
-      <Main />
+      <HSeciton title="Skills" id="skills">
+        <Skills />
+      </HSeciton>
       <div className="divider" />
-      <Contact />
+      <HSeciton title="Academic dev" id="academic">
+        <Academic />
+      </HSeciton>
+      <div className="divider" />
+      <HSeciton title="Contact" id="contact">
+        <Contact />
+      </HSeciton>
       <div className="divider" />
       <Footer />
       <a

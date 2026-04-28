@@ -1,23 +1,12 @@
-import React, { FC, useContext, useEffect, useRef } from "react";
+import React, { FC } from "react";
 import "./about.scss";
 
 // import myImage from "../../../public/images/formal-removebg-preview.png";
 import myImage from "/images/formal-removebg-preview.png";
-import { MyContext } from "../../context/context";
-import { animateSection } from "../../utilis/animate-section";
 interface spanStyle{
   color: String,
   fontWeight:String,
 }
-
-function About(): FC {
-    let contextData = useContext(MyContext);
-    const aboutDom = useRef();
-    useEffect(() => {
-      //side Effect
-      animateSection(contextData.userScreen_h, aboutDom.current);
-    }, []);
-
   const importantSpan :spanStyle = {
     color: "var(--orange)",
     fontWeight: "bold",
@@ -36,11 +25,10 @@ function About(): FC {
     "icon-postman",
   ];
   const distance_btwn_logos:number = 360 / Tech_Classes_Icons.length;
+function About(): FC {
+
   return (
-    <section id="about" ref={aboutDom}>
-      <div className="container">
-      {/* <h2 className="title">About me</h2> */}
-      <h2 className="title">About me</h2>
+      <>
       {/* First section is => image with all technologies */}
       <div className="section-body">
         <div className="img-container">
@@ -53,9 +41,9 @@ function About(): FC {
             <span style={importantSpan}> JavaScript, TypeScript, and Java</span> to create efficient and appropriate solutions.
             Integrating with <span style={importantSpan}>APIs and third parties</span>, and applying Error handling, with a focus on
             <span style={importantSpan}> Performance, Optimization, Reducing Runtime Complexity and reliable applications</span>. <br />Supported by, studying the fundamental computer science concepts such as
-            <span style={importantSpan}> OOP, Data Structures, Algorithms, and Design Patterns</span>, along with practical
+            <span style={importantSpan}> OOP, Data Structures, Algorithms, System Design, SOLID and Design Patterns</span>, along with practical
             <span style={importantSpan}> Database</span> and
-            <span style={importantSpan}> API</span> knowledge. <br />
+            <span style={importantSpan}> API</span>. <br />
         </div>
       </div>
       <div className="slider" >
@@ -69,8 +57,7 @@ function About(): FC {
           </div>
         ))}
         </div>
-        </div>
-    </section>
+        </>
   );
 }
 
