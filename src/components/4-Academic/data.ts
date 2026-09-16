@@ -13,6 +13,7 @@ export const data: academicStructure[] = [
     isActive: true,
     org: "University",
     logo: "/images/Damanhour-Logo.png",
+    // logo: "/images/Damanhour-Logo.png",
     course: [
       {
         title: "Damanhour University",
@@ -75,7 +76,7 @@ export const data: academicStructure[] = [
     ],
     images: [
       {
-        title: "ElZero Web School",
+        title: "Elzero Web School",
         imgPath: "/images/Elzero-youtube.jpg",
       },
       {
@@ -121,6 +122,10 @@ export const data: academicStructure[] = [
     logo: "/images/ministry.png",
     course: [
       {
+        title: "Data Engineering",
+        desc: "Deep learning the database (SQL & NoSQL) and analyzing big data with SQL and Python, also learned how to make data pipelines and data visualization.",
+      },
+      {
         title: "SoftWare Testing Scholarship",
         desc: "I've learned basics of ISTQB material, applied Manual Testing, API Testing (Postman), Automation (Selenium-Java), White Box and Black Box. ",
       },
@@ -145,6 +150,10 @@ export const data: academicStructure[] = [
       {
         title: "Software Testing",
         imgPath: "/images/DEPI.jpg",
+      },
+      {
+        title: "Data Engineering",
+        imgPath: "/images/data-engineering.png",
       },
     ],
   },

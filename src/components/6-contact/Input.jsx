@@ -1,59 +1,47 @@
 import { ValidationError, useForm } from "@formspree/react";
-import React from "react";
+import React, { useState } from "react";
 
-const Input = (props) => {
+const Input = ({id, type, required=true}) => {
   let [state, handleSubmit] = useForm("xwkgyzbw");
-  function focusing(e) {
-    // this function just adding a class to the label
-    e.target.previousElementSibling.classList.add("pressed");
+  const [isFocused, setIsFocused] = useState(false);
+  const bluring = (e) => {
+        // this function just removing a class from the label if the input is empty
+    if(e.target.value.trim()) return
+    setIsFocused(false);
   }
-  function bluring(e) {
-    // this function just removing a class from the label if the input is empty
-    !e.target.value &&
-      e.target.previousElementSibling.classList.remove("pressed");
+
+  if(type ==="textarea"){
+    return(
+      <div id={id}>
+            <label htmlFor={id} className={isFocused? "pressed" : ""}>Your message?</label>
+            <textarea
+              name="message"
+              id={id}
+              required
+              onFocus={(e) => {
+                setIsFocused(true);
+              }}
+              onBlur={(e) => bluring(e)}
+              autoComplete="off"
+            />
+          </div>
+    )
   }
+
   return (
-    <div className={props.class}>
-      <label htmlFor={props.for}>{props.labelName}</label>
-      {props.inputType ? (
-        <>
+    <div id={id}>
+      <label htmlFor={id} className={isFocused? "pressed" : ""}>
+        {id.toUpperCase()} {!required&& "(optional)"}
+      </label>
           <input
-            type={props.inputType}
-            id={props.for}
-            name={props.for}
-            required
-            onFocus={(e) => {
-              focusing(e);
-            }}
+            type={type}
+            id={id}
+            name={id}
+            required= {required}
+            onFocus={(e) => setIsFocused(true)}
             onBlur={(e) => bluring(e)}
             autoComplete="off"
           />
-          {props.for === "email" && (
-            <ValidationError
-              prefix="Email"
-              field="email"
-              errors={state.errors}
-            />
-          )}
-        </>
-      ) : (
-        <>
-          <textarea
-            id={props.for}
-            name={props.for}
-            required
-            onFocus={(e) => {
-              focusing(e);
-            }}
-            onBlur={(e) => bluring(e)}
-          />
-          <ValidationError
-            prefix="Message"
-            field="message"
-            errors={state.errors}
-          />
-        </>
-      )}
     </div>
   );
 };

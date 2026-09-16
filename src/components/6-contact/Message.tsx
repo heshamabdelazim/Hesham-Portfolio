@@ -10,7 +10,7 @@ function Message({ state }: { state: state }) {
     return(<Loading/>)
   }
   if (state.succeeded) {
-    return(<span className="response">Feedback, Sent successfully.✅ </span>)
+    return(<span className="response">The message had been sent successfully✔️, I will contact you soon.🤓 </span>)
   }
 }
 
